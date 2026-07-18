@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Politique cookies — Matrix™</title>
+  <style>
+    :root { --accent: #7b81ff; --muted: #9aa3b2; --fg: #f5f5f7; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      background: #03050a;
+      color: var(--fg);
+      font-family: "Inter", system-ui, sans-serif;
+      -webkit-font-smoothing: antialiased;
+      line-height: 1.7;
+    }
+    .page { max-width: 780px; margin: 0 auto; padding: 56px 24px 96px; }
+    .back {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 14px;
+      margin-bottom: 40px;
+      transition: color 0.2s;
+    }
+    .back:hover { color: var(--fg); }
+    h1 { font-size: clamp(28px, 4vw, 40px); font-weight: 700; margin: 0 0 8px; letter-spacing: -0.02em; }
+    .updated { color: var(--muted); font-size: 13px; margin: 0 0 48px; }
+    h2 { font-size: 18px; font-weight: 600; margin: 40px 0 12px; border-left: 3px solid var(--accent); padding-left: 12px; }
+    p { color: rgba(255,255,255,0.8); margin: 0 0 14px; }
+    a { color: var(--accent); }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 16px 0 24px;
+      font-size: 13px;
+    }
+    th {
+      background: rgba(123, 129, 255, 0.12);
+      color: var(--fg);
+      font-weight: 600;
+      padding: 10px 14px;
+      text-align: left;
+      border: 1px solid rgba(255,255,255,0.08);
+    }
+    td {
+      padding: 10px 14px;
+      border: 1px solid rgba(255,255,255,0.06);
+      color: rgba(255,255,255,0.75);
+      vertical-align: top;
+    }
+    tr:nth-child(even) td { background: rgba(255,255,255,0.02); }
+    .reset-btn {
+      display: inline-block;
+      margin-top: 8px;
+      padding: 10px 20px;
+      background: linear-gradient(135deg, #7b81ff, #5e6bff);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      font-size: 14px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: opacity 0.2s;
+    }
+    .reset-btn:hover { opacity: 0.85; }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <a class="back" href="index.html">← Retour à l'accueil</a>
+
+    <h1>Politique cookies</h1>
+    <p class="updated">Dernière mise à jour : 18 juillet 2026</p>
+
+    <p>Un cookie est un petit fichier déposé sur ton appareil lors de la visite du site. Il permet notamment de mémoriser certaines informations entre deux visites.</p>
+
+    <h2>Catégories de cookies utilisés</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Catégorie</th>
+          <th>Finalité</th>
+          <th>Consentement</th>
+          <th>Durée</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Strictement nécessaires</td>
+          <td>Fonctionnement, sécurité, mémorisation du choix cookies</td>
+          <td>Non requis</td>
+          <td>6–12 mois</td>
+        </tr>
+        <tr>
+          <td>Mesure d'audience</td>
+          <td>[Google Analytics / Plausible] — statistiques de fréquentation</td>
+          <td>Requis</td>
+          <td>13 mois max</td>
+        </tr>
+        <tr>
+          <td>Publicité / retargeting</td>
+          <td>[LinkedIn Insight Tag, Meta Pixel] — mesure et ciblage des campagnes</td>
+          <td>Requis</td>
+          <td>13 mois max</td>
+        </tr>
+        <tr>
+          <td>Outils tiers intégrés</td>
+          <td>iClosed — prise de rendez-vous</td>
+          <td>Requis si non essentiel</td>
+          <td>Variable</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h2>Gestion du consentement</h2>
+    <p>Le consentement est demandé au premier accès au site et peut être modifié à tout moment ci-dessous ou via les réglages de ton navigateur. Le choix est conservé pendant 6 mois maximum.</p>
+
+    <h2>Modifier mes préférences</h2>
+    <p>Clique sur le bouton ci-dessous pour réinitialiser ton choix et afficher à nouveau le bandeau.</p>
+    <button class="reset-btn" onclick="localStorage.removeItem('cookie-choice'); window.location.href='index.html'">Gérer mes cookies</button>
+
+    <h2>Réglages du navigateur</h2>
+    <p>Tu peux également configurer ton navigateur pour bloquer ou supprimer tous les cookies. Attention : la désactivation de certains cookies peut altérer le fonctionnement du site.</p>
+
+    <h2>Contact</h2>
+    <p>Pour toute question : <a href="mailto:deprodesign1@gmail.com">deprodesign1@gmail.com</a></p>
+  </div>
+</body>
+</html>
