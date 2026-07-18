@@ -65,9 +65,10 @@ h1, h2, h3, .brand, .kicker, .phase-tag, .tl-badge { font-family: var(--font-dis
 
 /* ============ LAYOUT ============ */
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--s3); }
-section { padding: var(--s10) 0; }
-@media (min-width: 768px) { section { padding: var(--s12) 0; } }
-.section-head { max-width: 680px; margin-bottom: var(--s6); }
+section { padding: var(--s8) 0; }
+@media (min-width: 768px) { section { padding: var(--s10) 0; } }
+.section-head { max-width: 680px; margin-bottom: var(--s5); }
+.section-head .lead { margin-top: var(--s2); }
 
 /* ============ HEADER ============ */
 .site-header {
@@ -120,7 +121,7 @@ section { padding: var(--s10) 0; }
 .btn-ghost:hover { background: var(--glass-strong); }
 
 /* ============ HERO ============ */
-.hero { position: relative; padding: var(--s10) 0 var(--s8); overflow: hidden; }
+.hero { position: relative; padding: var(--s8) 0 var(--s6); overflow: hidden; }
 .hero::before {
   content: ""; position: absolute; inset: -40% -20% auto;
   height: 130%;
@@ -164,7 +165,7 @@ section { padding: var(--s10) 0; }
 
 /* ============ KPI BAR ============ */
 .kpi-bar {
-  margin-top: var(--s8);
+  margin-top: var(--s6);
   display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
   background: var(--border);
   border: 1px solid var(--border); border-radius: var(--r-md);
