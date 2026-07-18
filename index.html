@@ -57,17 +57,18 @@
   <style>
     /* ============ DESIGN SYSTEM ============ */
     :root {
-      --bg: #0d0d0d;
-      --bg-elev: #131316;
+      --bg: #0a0714;
+      --bg-elev: #130c22;
       --accent: #6c47ff;
-      --accent-soft: rgba(108, 71, 255, 0.14);
-      --accent-border: rgba(108, 71, 255, 0.35);
-      --fg: #f4f4f6;
-      --muted: #a3a3ad;
-      --faint: #6e6e78;
-      --glass: rgba(255, 255, 255, 0.04);
-      --glass-strong: rgba(255, 255, 255, 0.07);
-      --border: rgba(255, 255, 255, 0.09);
+      --accent-2: #9b7bff;
+      --accent-soft: rgba(108, 71, 255, 0.16);
+      --accent-border: rgba(124, 90, 255, 0.4);
+      --fg: #f5f3ff;
+      --muted: #b3aacb;
+      --faint: #867e9f;
+      --glass: rgba(139, 109, 255, 0.055);
+      --glass-strong: rgba(139, 109, 255, 0.11);
+      --border: rgba(151, 125, 255, 0.16);
       --green: #4ade80;
       --red: #f87171;
       /* 8pt scale */
@@ -80,7 +81,11 @@
     * { box-sizing: border-box; margin: 0; padding: 0; }
     html { scroll-behavior: smooth; }
     body {
-      background: var(--bg);
+      background:
+        radial-gradient(ellipse 85% 55% at 50% -12%, rgba(108, 71, 255, 0.17), transparent 62%),
+        radial-gradient(ellipse 55% 45% at 105% 38%, rgba(89, 44, 214, 0.11), transparent 60%),
+        radial-gradient(ellipse 55% 45% at -8% 72%, rgba(108, 71, 255, 0.09), transparent 60%),
+        var(--bg);
       color: var(--fg);
       font-family: var(--font);
       font-size: 16px;
@@ -95,6 +100,12 @@
     /* ============ TYPO ============ */
     h1 { font-size: clamp(32px, 6vw, 60px); line-height: 1.08; font-weight: 800; letter-spacing: -0.025em; }
     h2 { font-size: clamp(26px, 4vw, 40px); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; }
+    h1, h2 {
+      background: linear-gradient(180deg, #ffffff 35%, #cabdf5);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
     h3 { font-size: 19px; font-weight: 700; }
     .kicker {
       display: inline-block;
@@ -118,7 +129,7 @@
       position: sticky; top: 0; z-index: 100;
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
-      background: rgba(13, 13, 13, 0.72);
+      background: rgba(10, 7, 20, 0.7);
       border-bottom: 1px solid var(--border);
     }
     .header-inner {
@@ -161,8 +172,8 @@
       content: ""; position: absolute; inset: -40% -20% auto;
       height: 130%;
       background:
-        radial-gradient(ellipse 55% 45% at 30% 30%, rgba(108, 71, 255, 0.22), transparent 65%),
-        radial-gradient(ellipse 40% 40% at 75% 15%, rgba(108, 71, 255, 0.12), transparent 60%);
+        radial-gradient(ellipse 55% 45% at 30% 30%, rgba(108, 71, 255, 0.3), transparent 65%),
+        radial-gradient(ellipse 40% 40% at 75% 15%, rgba(155, 123, 255, 0.18), transparent 60%);
       animation: hero-drift 18s ease-in-out infinite alternate;
       pointer-events: none;
     }
@@ -175,7 +186,14 @@
       display: grid; gap: var(--s6); align-items: center;
     }
     @media (min-width: 900px) { .hero-grid { grid-template-columns: 1.1fr 0.9fr; } }
-    .hero h1 em { font-style: normal; color: var(--accent); }
+    .hero h1 em {
+      font-style: normal;
+      background: linear-gradient(120deg, var(--accent-2), var(--accent));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      filter: drop-shadow(0 0 22px rgba(108, 71, 255, 0.45));
+    }
     .hero .lead { margin-top: var(--s3); }
     .hero-cta-row { margin-top: var(--s4); display: flex; flex-wrap: wrap; gap: var(--s2); align-items: center; }
     .hero-note { font-size: 13px; color: var(--faint); margin-top: var(--s2); }
@@ -223,7 +241,12 @@
       -webkit-backdrop-filter: blur(10px);
       transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
     }
-    .card:hover { transform: translateY(-4px); border-color: var(--accent-border); background: var(--glass-strong); }
+    .card:hover {
+      transform: translateY(-4px);
+      border-color: var(--accent-border);
+      background: var(--glass-strong);
+      box-shadow: 0 16px 48px rgba(108, 71, 255, 0.18);
+    }
 
     /* ============ DOULEUR ============ */
     .pain-grid { display: grid; gap: var(--s2); }
@@ -275,20 +298,46 @@
     .icp-yes li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: 700; }
     .icp-no li::before { content: "→"; position: absolute; left: 0; color: var(--red); font-weight: 700; }
 
-    /* ============ TIMELINE ============ */
+    /* ============ TIMELINE / ROADMAP ============ */
     .timeline { list-style: none; position: relative; display: flex; flex-direction: column; gap: var(--s4); }
     .timeline::before {
-      content: ""; position: absolute; left: 11px; top: 8px; bottom: 8px;
-      width: 2px; background: linear-gradient(var(--accent), rgba(108, 71, 255, 0.1));
+      content: ""; position: absolute; left: 19px; top: 20px; bottom: 20px;
+      width: 2px; background: linear-gradient(180deg, var(--accent), rgba(108, 71, 255, 0.06));
     }
-    .timeline li { position: relative; padding-left: var(--s6); }
-    .timeline li::before {
-      content: ""; position: absolute; left: 4px; top: 6px;
-      width: 16px; height: 16px; border-radius: 50%;
-      background: var(--bg); border: 3px solid var(--accent);
+    .tl-item { position: relative; padding-left: var(--s8); }
+    .tl-node {
+      position: absolute; left: 0; top: 0;
+      width: 40px; height: 40px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      font-weight: 800; font-size: 15px;
+      background: var(--bg-elev); color: var(--accent-2);
+      border: 2px solid var(--accent-border);
+      box-shadow: 0 0 24px rgba(108, 71, 255, 0.4);
     }
-    .tl-days { font-size: 12px; font-weight: 700; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); display: block; margin-bottom: 2px; }
-    .timeline p { color: var(--muted); font-size: 15px; margin-top: 4px; max-width: 560px; }
+    .tl-head { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--s2); flex-wrap: wrap; }
+    .tl-head h3 { font-size: 20px; }
+    .tl-badge {
+      font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
+      color: var(--accent-2); background: var(--accent-soft);
+      border: 1px solid var(--accent-border); border-radius: 999px;
+      padding: 6px 14px; white-space: nowrap;
+      font-variant-numeric: tabular-nums;
+    }
+    .tl-obj { color: var(--fg); font-weight: 600; font-size: 15px; margin-top: var(--s2); }
+    .tl-list { list-style: none; margin-top: var(--s2); display: flex; flex-direction: column; gap: var(--s1); }
+    .tl-list li { position: relative; padding-left: var(--s3); color: var(--muted); font-size: 14px; }
+    .tl-list li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
+    .timeline-closing {
+      margin-top: var(--s5);
+      font-size: clamp(17px, 2.2vw, 21px); font-weight: 600; line-height: 1.5;
+      color: var(--fg); max-width: 680px;
+    }
+    .timeline-closing em { font-style: normal; color: var(--accent-2); }
+    @media (max-width: 560px) {
+      .tl-item { padding-left: var(--s6); }
+      .tl-node { width: 32px; height: 32px; font-size: 13px; }
+      .timeline::before { left: 15px; }
+    }
 
     /* ============ FAQ ============ */
     .faq { max-width: 760px; }
@@ -313,7 +362,7 @@
       text-align: center;
       border: 1px solid var(--accent-border);
       background:
-        radial-gradient(ellipse 70% 90% at 50% 0%, rgba(108, 71, 255, 0.16), transparent 70%),
+        radial-gradient(ellipse 70% 90% at 50% 0%, rgba(108, 71, 255, 0.26), transparent 70%),
         var(--glass);
       border-radius: var(--r-lg);
       padding: var(--s8) var(--s3);
@@ -356,7 +405,7 @@
     .cookie-banner {
       position: fixed; bottom: var(--s2); left: var(--s2); right: var(--s2);
       max-width: 620px; z-index: 200;
-      background: rgba(19, 19, 22, 0.96);
+      background: rgba(19, 13, 34, 0.96);
       backdrop-filter: blur(16px);
       -webkit-backdrop-filter: blur(16px);
       border: 1px solid var(--border); border-radius: var(--r-md);
@@ -446,6 +495,7 @@
         <div class="section-head reveal">
           <span class="kicker">Le vrai problème</span>
           <h2>Ton offre est bonne. Ton acquisition ne suit pas.</h2>
+          <p class="lead" style="margin-top: var(--s2);">Ce n'est pas un problème de compétence. C'est un problème de système.</p>
         </div>
         <div class="pain-grid">
           <article class="card reveal">
@@ -587,31 +637,73 @@
     <section id="timeline" aria-label="Déroulé des 45 jours">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">Le déroulé</span>
-          <h2>45 jours, semaine par semaine.</h2>
+          <span class="kicker">Roadmap Matrix™</span>
+          <h2>45 jours. Trois phases. Zéro improvisation.</h2>
         </div>
         <ol class="timeline">
-          <li class="reveal">
-            <span class="tl-days">Jours 1 – 7</span>
-            <h3>Diagnostic et positionnement</h3>
-            <p>Audit de ton offre et de ton profil. On définit ta cible prioritaire et ton angle de vente pour les 45 jours.</p>
+          <li class="tl-item reveal">
+            <div class="tl-node" aria-hidden="true">1</div>
+            <div class="card">
+              <div class="tl-head">
+                <div>
+                  <span class="phase-tag">Phase 1</span>
+                  <h3>Diagnostic &amp; positionnement</h3>
+                </div>
+                <span class="tl-badge">J1 → J5</span>
+              </div>
+              <p class="tl-obj">Objectif : comprendre ton activité et définir une stratégie d'acquisition LinkedIn adaptée.</p>
+              <ul class="tl-list">
+                <li>Analyse de ton offre, ton marché et ton positionnement</li>
+                <li>Définition de ton client idéal (ICP)</li>
+                <li>Clarification de ton angle de communication</li>
+                <li>Structuration du discours commercial LinkedIn</li>
+                <li>Préparation de la stratégie avant lancement</li>
+              </ul>
+            </div>
           </li>
-          <li class="reveal">
-            <span class="tl-days">Jours 8 – 21</span>
-            <h3>Installation du système</h3>
-            <p>Profil optimisé, ligne éditoriale, séquences de prospection : ta machine LinkedIn est en place et tourne.</p>
+          <li class="tl-item reveal">
+            <div class="tl-node" aria-hidden="true">2</div>
+            <div class="card">
+              <div class="tl-head">
+                <div>
+                  <span class="phase-tag">Phase 2</span>
+                  <h3>Configuration &amp; lancement</h3>
+                </div>
+                <span class="tl-badge">J5 → J7</span>
+              </div>
+              <p class="tl-obj">Objectif : mettre en place ton système de prospection LinkedIn et lancer les premières campagnes.</p>
+              <ul class="tl-list">
+                <li>Configuration de l'environnement de prospection</li>
+                <li>Création du ciblage prospects</li>
+                <li>Préparation des séquences de messages</li>
+                <li>Paramétrage du setting conversationnel</li>
+                <li>Tests finaux et lancement des campagnes LinkedIn</li>
+              </ul>
+            </div>
           </li>
-          <li class="reveal">
-            <span class="tl-days">Jours 22 – 38</span>
-            <h3>Conversations et RDV</h3>
-            <p>Cadence de publication et de prospection. Les conversations démarrent, les premiers RDV qualifiés tombent.</p>
-          </li>
-          <li class="reveal">
-            <span class="tl-days">Jours 39 – 45</span>
-            <h3>Conversion et autonomie</h3>
-            <p>Nurturing des leads chauds, process de closing, transfert complet du système. Tu repars autonome.</p>
+          <li class="tl-item reveal">
+            <div class="tl-node" aria-hidden="true">3</div>
+            <div class="card">
+              <div class="tl-head">
+                <div>
+                  <span class="phase-tag">Phase 3</span>
+                  <h3>Exploitation &amp; optimisation</h3>
+                </div>
+                <span class="tl-badge">J7 → J45</span>
+              </div>
+              <p class="tl-obj">Objectif : transformer LinkedIn en un canal d'acquisition régulier avec des conversations qualifiées.</p>
+              <ul class="tl-list">
+                <li>Gestion des conversations avec les prospects dès les premières réponses</li>
+                <li>Qualification des opportunités</li>
+                <li>Booking des rendez-vous qualifiés</li>
+                <li>Optimisation continue des campagnes</li>
+                <li>Analyse des performances et ajustements stratégiques</li>
+                <li>Suivi régulier des résultats</li>
+              </ul>
+            </div>
           </li>
         </ol>
+        <p class="timeline-closing reveal">45 jours pour passer d'une prospection LinkedIn non structurée à <em>un système d'acquisition organisé et optimisé</em>.</p>
       </div>
     </section>
 
