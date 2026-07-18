@@ -7,10 +7,15 @@
   "cleanUrls": true,
   "trailingSlash": false,
   "redirects": [
-    { "source": "/cgv", "destination": "/conditions-generales", "permanent": true },
-    { "source": "/mentions", "destination": "/mentions-legales", "permanent": true },
-    { "source": "/confidentialite", "destination": "/politique-de-confidentialite", "permanent": true },
-    { "source": "/cookies", "destination": "/politique-cookies", "permanent": true }
+    { "source": "/mentions-legales", "destination": "/legal/mentions-legales", "permanent": true },
+    { "source": "/conditions-generales", "destination": "/legal/conditions-generales", "permanent": true },
+    { "source": "/politique-de-confidentialite", "destination": "/legal/politique-de-confidentialite", "permanent": true },
+    { "source": "/politique-cookies", "destination": "/legal/politique-cookies", "permanent": true },
+    { "source": "/avertissement-resultats", "destination": "/legal/avertissement-resultats", "permanent": true },
+    { "source": "/cgv", "destination": "/legal/conditions-generales", "permanent": true },
+    { "source": "/mentions", "destination": "/legal/mentions-legales", "permanent": true },
+    { "source": "/confidentialite", "destination": "/legal/politique-de-confidentialite", "permanent": true },
+    { "source": "/cookies", "destination": "/legal/politique-cookies", "permanent": true }
   ],
   "headers": [
     {
@@ -26,9 +31,15 @@
       ]
     },
     {
-      "source": "/(.*)\\.(png|jpg|jpeg|webp|svg)",
+      "source": "/assets/img/(.*)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=31536000, immutable" }
+      ]
+    },
+    {
+      "source": "/assets/(css|js)/(.*)",
+      "headers": [
+        { "key": "Cache-Control", "value": "public, max-age=86400, stale-while-revalidate=604800" }
       ]
     }
   ]

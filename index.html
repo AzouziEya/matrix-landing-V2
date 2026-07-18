@@ -7,38 +7,38 @@
   <meta name="description" content="Matrix™ : le système d'acquisition LinkedIn pour freelances, agences et consultants B2B. 45 jours pour structurer ton acquisition et booker des RDV qualifiés.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0a0714">
-  <link rel="canonical" href="https://matrix-landing-taupe.vercel.app/">
-  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
-  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
-  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="canonical" href="https://matrix-tm.vercel.app/">
+  <link rel="icon" type="image/png" sizes="32x32" href="/assets/img/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/assets/img/favicon-512.png">
+  <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
   <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"></noscript>
   <link rel="preconnect" href="https://app.iclosed.io" crossorigin>
-  <link rel="preload" as="image" href="/riseup.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="/assets/img/riseup.webp" fetchpriority="high">
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:site_name" content="Matrix™">
   <meta property="og:locale" content="fr_FR">
   <meta property="og:title" content="Matrix™ | +64 RDV qualifiés en 1 mois via LinkedIn">
   <meta property="og:description" content="Le système d'acquisition LinkedIn structuré pour freelances, agences et consultants B2B. 45 jours.">
-  <meta property="og:url" content="https://matrix-landing-taupe.vercel.app/">
-  <meta property="og:image" content="https://matrix-landing-taupe.vercel.app/og-image.png">
+  <meta property="og:url" content="https://matrix-tm.vercel.app/">
+  <meta property="og:image" content="https://matrix-tm.vercel.app/assets/img/og-image.png">
   <meta property="og:image:width" content="1200">
   <meta property="og:image:height" content="630">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Matrix™ | +64 RDV qualifiés en 1 mois via LinkedIn">
   <meta name="twitter:description" content="Le système d'acquisition LinkedIn structuré pour freelances, agences et consultants B2B.">
-  <meta name="twitter:image" content="https://matrix-landing-taupe.vercel.app/og-image.png">
+  <meta name="twitter:image" content="https://matrix-tm.vercel.app/assets/img/og-image.png">
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
     "@type": "ProfessionalService",
     "name": "Matrix™",
     "description": "Système d'acquisition LinkedIn structuré pour freelances, agences et consultants B2B.",
-    "url": "https://matrix-landing-taupe.vercel.app/",
+    "url": "https://matrix-tm.vercel.app/",
     "email": "deprodesign1@gmail.com",
     "telephone": "+32486129708",
     "founder": { "@type": "Person", "name": "Eya Azouzi" },
@@ -54,419 +54,7 @@
     "sameAs": ["https://www.linkedin.com/in/dpagency-be/"]
   }
   </script>
-  <style>
-    /* ============ DESIGN SYSTEM ============ */
-    :root {
-      --bg: #0a0714;
-      --bg-elev: #130c22;
-      --accent: #6c47ff;
-      --accent-2: #9b7bff;
-      --accent-soft: rgba(108, 71, 255, 0.16);
-      --accent-border: rgba(124, 90, 255, 0.4);
-      --fg: #f5f3ff;
-      --muted: #b3aacb;
-      --faint: #867e9f;
-      --glass: rgba(139, 109, 255, 0.055);
-      --glass-strong: rgba(139, 109, 255, 0.11);
-      --border: rgba(151, 125, 255, 0.16);
-      --green: #4ade80;
-      --red: #f87171;
-      /* 8pt scale */
-      --s1: 8px; --s2: 16px; --s3: 24px; --s4: 32px;
-      --s5: 40px; --s6: 48px; --s8: 64px; --s10: 80px; --s12: 96px;
-      --r-sm: 10px; --r-md: 16px; --r-lg: 24px;
-      --font-display: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
-      --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
-      --maxw: 1120px;
-    }
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      background:
-        radial-gradient(ellipse 85% 55% at 50% -12%, rgba(108, 71, 255, 0.17), transparent 62%),
-        radial-gradient(ellipse 55% 45% at 105% 38%, rgba(89, 44, 214, 0.11), transparent 60%),
-        radial-gradient(ellipse 55% 45% at -8% 72%, rgba(108, 71, 255, 0.09), transparent 60%),
-        var(--bg);
-      color: var(--fg);
-      font-family: var(--font-body);
-      font-size: 16px;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-    img { max-width: 100%; height: auto; display: block; }
-    a { color: inherit; }
-    ::selection { background: var(--accent); color: #fff; }
-
-    /* ============ TYPO ============ */
-    h1 { font-size: clamp(32px, 6vw, 60px); line-height: 1.08; font-weight: 800; letter-spacing: -0.025em; }
-    h2 { font-size: clamp(26px, 4vw, 40px); line-height: 1.15; font-weight: 700; letter-spacing: -0.02em; }
-    h1, h2 {
-      background: linear-gradient(180deg, #ffffff 35%, #cabdf5);
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-    }
-    h3 { font-size: 19px; font-weight: 700; }
-    h1, h2, h3, .brand, .kicker, .phase-tag, .tl-badge { font-family: var(--font-display); }
-    .kicker {
-      display: inline-block;
-      font-size: 12px;
-      font-weight: 600;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: var(--s2);
-    }
-    .lead { color: var(--muted); font-size: clamp(16px, 2vw, 19px); max-width: 640px; }
-
-    /* ============ LAYOUT ============ */
-    .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--s3); }
-    section { padding: var(--s10) 0; }
-    @media (min-width: 768px) { section { padding: var(--s12) 0; } }
-    .section-head { max-width: 680px; margin-bottom: var(--s6); }
-
-    /* ============ HEADER ============ */
-    .site-header {
-      position: sticky; top: 0; z-index: 100;
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      background: rgba(10, 7, 20, 0.7);
-      border-bottom: 1px solid var(--border);
-    }
-    .header-inner {
-      max-width: var(--maxw); margin: 0 auto;
-      padding: var(--s2) var(--s3);
-      display: flex; align-items: center; justify-content: space-between; gap: var(--s2);
-    }
-    .brand {
-      font-weight: 800; font-size: 18px; letter-spacing: -0.01em; text-decoration: none;
-      display: inline-flex; align-items: center; gap: 10px;
-    }
-    .brand img { width: 26px; height: 26px; border-radius: 7px; }
-    .brand span { color: var(--accent-2); }
-    .header-nav { display: none; align-items: center; gap: 4px; }
-    .header-nav a {
-      color: var(--muted); text-decoration: none; font-size: 14px; font-weight: 500;
-      padding: 8px 14px; border-radius: 999px;
-      transition: color 0.2s, background 0.2s;
-    }
-    .header-nav a:hover { color: var(--fg); background: var(--glass-strong); }
-    @media (min-width: 900px) { .header-nav { display: flex; } }
-
-    /* ============ BUTTONS ============ */
-    .btn {
-      display: inline-flex; align-items: center; justify-content: center; gap: var(--s1);
-      font-family: var(--font-display); font-weight: 700; font-size: 15px;
-      padding: 14px 26px; border-radius: var(--r-sm);
-      text-decoration: none; border: none; cursor: pointer;
-      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
-      will-change: transform;
-    }
-    .btn-primary {
-      background: var(--accent); color: #fff;
-      box-shadow: 0 8px 28px rgba(108, 71, 255, 0.35);
-    }
-    .btn-primary:hover { transform: translateY(-2px); box-shadow: 0 12px 36px rgba(108, 71, 255, 0.5); }
-    .btn-primary:active { transform: translateY(0); }
-    .btn-sm { padding: 10px 18px; font-size: 14px; }
-    .btn-ghost {
-      background: var(--glass); color: var(--fg);
-      border: 1px solid var(--border);
-    }
-    .btn-ghost:hover { background: var(--glass-strong); }
-
-    /* ============ HERO ============ */
-    .hero { position: relative; padding: var(--s10) 0 var(--s8); overflow: hidden; }
-    .hero::before {
-      content: ""; position: absolute; inset: -40% -20% auto;
-      height: 130%;
-      background:
-        radial-gradient(ellipse 55% 45% at 30% 30%, rgba(108, 71, 255, 0.3), transparent 65%),
-        radial-gradient(ellipse 40% 40% at 75% 15%, rgba(155, 123, 255, 0.18), transparent 60%);
-      animation: hero-drift 18s ease-in-out infinite alternate;
-      pointer-events: none;
-    }
-    @keyframes hero-drift {
-      from { transform: translate3d(-3%, 0, 0) scale(1); }
-      to   { transform: translate3d(3%, 4%, 0) scale(1.06); }
-    }
-    .hero-grid {
-      position: relative;
-      display: grid; gap: var(--s6); align-items: center;
-    }
-    @media (min-width: 900px) { .hero-grid { grid-template-columns: 1.1fr 0.9fr; } }
-    .hero h1 em {
-      font-style: normal;
-      background: linear-gradient(120deg, var(--accent-2), var(--accent));
-      -webkit-background-clip: text;
-      background-clip: text;
-      color: transparent;
-      filter: drop-shadow(0 0 22px rgba(108, 71, 255, 0.45));
-    }
-    .hero .lead { margin-top: var(--s3); }
-    .hero-cta-row { margin-top: var(--s4); display: flex; flex-wrap: wrap; gap: var(--s2); align-items: center; }
-    .hero-note { font-size: 13px; color: var(--faint); margin-top: var(--s2); }
-    .hero-visual {
-      position: relative;
-      border: 1px solid var(--border);
-      background: var(--glass);
-      backdrop-filter: blur(12px);
-      -webkit-backdrop-filter: blur(12px);
-      border-radius: var(--r-lg);
-      padding: var(--s2);
-      box-shadow: 0 32px 64px rgba(0, 0, 0, 0.5);
-    }
-    .hero-visual img { border-radius: var(--r-md); }
-
-    /* ============ KPI BAR ============ */
-    .kpi-bar {
-      margin-top: var(--s8);
-      display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px;
-      background: var(--border);
-      border: 1px solid var(--border); border-radius: var(--r-md);
-      overflow: hidden;
-    }
-    @media (min-width: 768px) { .kpi-bar { grid-template-columns: repeat(4, 1fr); } }
-    .kpi {
-      background: var(--bg-elev);
-      padding: var(--s3);
-      display: flex; flex-direction: column; gap: 4px;
-    }
-    .kpi strong {
-      font-size: clamp(24px, 3vw, 32px); font-weight: 800; letter-spacing: -0.02em;
-      color: var(--fg);
-      font-variant-numeric: tabular-nums;
-    }
-    .kpi strong .plus { color: var(--accent); }
-    .kpi span { font-size: 13px; color: var(--muted); font-weight: 500; }
-
-    /* ============ GLASS CARD ============ */
-    .card {
-      background: var(--glass);
-      border: 1px solid var(--border);
-      border-radius: var(--r-md);
-      padding: var(--s4);
-      backdrop-filter: blur(10px);
-      -webkit-backdrop-filter: blur(10px);
-      transition: transform 0.25s ease, border-color 0.25s ease, background 0.25s ease;
-    }
-    .card:hover {
-      transform: translateY(-4px);
-      border-color: var(--accent-border);
-      background: var(--glass-strong);
-      box-shadow: 0 16px 48px rgba(108, 71, 255, 0.18);
-    }
-
-    /* ============ DOULEUR ============ */
-    .pain-grid { display: grid; gap: var(--s2); }
-    @media (min-width: 768px) { .pain-grid { grid-template-columns: repeat(3, 1fr); gap: var(--s3); } }
-    .pain-num {
-      font-size: 13px; font-weight: 700; color: var(--accent);
-      letter-spacing: 0.12em; margin-bottom: var(--s2); display: block;
-    }
-    .pain-grid p { color: var(--muted); font-size: 15px; margin-top: var(--s1); }
-
-    /* ============ PHASES ============ */
-    .phase-grid { display: grid; gap: var(--s3); }
-    @media (min-width: 900px) { .phase-grid { grid-template-columns: repeat(3, 1fr); } }
-    .phase-letter {
-      width: 48px; height: 48px; border-radius: var(--r-sm);
-      display: flex; align-items: center; justify-content: center;
-      font-size: 20px; font-weight: 800;
-      background: var(--accent-soft); color: var(--accent);
-      border: 1px solid var(--accent-border);
-      margin-bottom: var(--s3);
-    }
-    .phase-tag { font-size: 12px; font-weight: 600; letter-spacing: 0.16em; text-transform: uppercase; color: var(--faint); margin-bottom: 4px; display: block; }
-    .phase-grid p { color: var(--muted); font-size: 15px; margin-top: var(--s2); }
-
-    /* ============ PREUVES ============ */
-    .proof-grid { display: grid; gap: var(--s3); }
-    @media (min-width: 768px) { .proof-grid { grid-template-columns: repeat(2, 1fr); } }
-    .proof-card { padding: 0; overflow: hidden; display: flex; flex-direction: column; }
-    .proof-card img { width: 100%; aspect-ratio: 16 / 9; object-fit: cover; border-bottom: 1px solid var(--border); }
-    .proof-body { padding: var(--s3); display: flex; flex-direction: column; gap: var(--s1); flex: 1; }
-    .proof-body h3 { font-size: 17px; }
-    .proof-body p { color: var(--muted); font-size: 15px; }
-    .proof-metrics { display: flex; gap: var(--s3); margin-top: auto; padding-top: var(--s2); }
-    .proof-metrics div { display: flex; flex-direction: column; }
-    .proof-metrics strong { color: var(--accent); font-size: 18px; font-weight: 800; }
-    .proof-metrics span { font-size: 12px; color: var(--faint); }
-    .proof-disclaimer { margin-top: var(--s3); font-size: 12px; color: var(--faint); }
-    .proof-disclaimer a { color: var(--muted); }
-
-    /* ============ ICP ============ */
-    .icp-grid { display: grid; gap: var(--s3); }
-    @media (min-width: 768px) { .icp-grid { grid-template-columns: 1fr 1fr; } }
-    .icp-col h3 { margin-bottom: var(--s3); display: flex; align-items: center; gap: var(--s1); }
-    .icp-dot { width: 10px; height: 10px; border-radius: 50%; flex: none; }
-    .icp-yes .icp-dot { background: var(--green); }
-    .icp-no .icp-dot { background: var(--red); }
-    .icp-col ul { list-style: none; display: flex; flex-direction: column; gap: var(--s2); }
-    .icp-col li { padding-left: var(--s3); position: relative; color: var(--muted); font-size: 15px; }
-    .icp-yes li::before { content: "→"; position: absolute; left: 0; color: var(--green); font-weight: 700; }
-    .icp-no li::before { content: "→"; position: absolute; left: 0; color: var(--red); font-weight: 700; }
-
-    /* ============ TIMELINE / ROADMAP ============ */
-    .timeline { list-style: none; position: relative; display: flex; flex-direction: column; gap: var(--s4); }
-    .timeline::before {
-      content: ""; position: absolute; left: 19px; top: 20px; bottom: 20px;
-      width: 2px; background: linear-gradient(180deg, var(--accent), rgba(108, 71, 255, 0.06));
-    }
-    .tl-item { position: relative; padding-left: var(--s8); }
-    .tl-node {
-      position: absolute; left: 0; top: 0;
-      width: 40px; height: 40px; border-radius: 50%;
-      display: flex; align-items: center; justify-content: center;
-      font-weight: 800; font-size: 15px;
-      background: var(--bg-elev); color: var(--accent-2);
-      border: 2px solid var(--accent-border);
-      box-shadow: 0 0 24px rgba(108, 71, 255, 0.4);
-    }
-    .tl-head { display: flex; justify-content: space-between; align-items: flex-start; gap: var(--s2); flex-wrap: wrap; }
-    .tl-head h3 { font-size: 20px; }
-    .tl-badge {
-      font-size: 12px; font-weight: 700; letter-spacing: 0.08em;
-      color: var(--accent-2); background: var(--accent-soft);
-      border: 1px solid var(--accent-border); border-radius: 999px;
-      padding: 6px 14px; white-space: nowrap;
-      font-variant-numeric: tabular-nums;
-    }
-    .tl-obj { color: var(--fg); font-weight: 600; font-size: 15px; margin-top: var(--s2); }
-    .tl-list { list-style: none; margin-top: var(--s2); display: flex; flex-direction: column; gap: var(--s1); }
-    .tl-list li { position: relative; padding-left: var(--s3); color: var(--muted); font-size: 15px; }
-    .tl-list li::before { content: "→"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
-    .timeline-closing {
-      margin-top: var(--s5);
-      font-size: clamp(17px, 2.2vw, 21px); font-weight: 600; line-height: 1.5;
-      color: var(--fg); max-width: 680px;
-    }
-    .timeline-closing em { font-style: normal; color: var(--accent-2); }
-    @media (max-width: 560px) {
-      .tl-item { padding-left: var(--s6); }
-      .tl-node { width: 32px; height: 32px; font-size: 13px; }
-      .timeline::before { left: 15px; }
-    }
-
-    /* ============ FAQ ============ */
-    .faq { max-width: 760px; }
-    .faq details {
-      border: 1px solid var(--border); border-radius: var(--r-sm);
-      background: var(--glass); margin-bottom: var(--s2);
-      transition: border-color 0.2s;
-    }
-    .faq details[open] { border-color: var(--accent-border); }
-    .faq summary {
-      cursor: pointer; padding: var(--s3);
-      font-weight: 600; font-size: 16px;
-      list-style: none; display: flex; justify-content: space-between; align-items: center; gap: var(--s2);
-    }
-    .faq summary::-webkit-details-marker { display: none; }
-    .faq summary::after { content: "+"; font-size: 20px; font-weight: 400; color: var(--accent); transition: transform 0.2s; flex: none; }
-    .faq details[open] summary::after { transform: rotate(45deg); }
-    .faq .faq-a { padding: 0 var(--s3) var(--s3); color: var(--muted); font-size: 15px; }
-
-    /* ============ CTA FINAL ============ */
-    .cta-final {
-      text-align: center;
-      border: 1px solid var(--accent-border);
-      background:
-        radial-gradient(ellipse 70% 90% at 50% 0%, rgba(108, 71, 255, 0.26), transparent 70%),
-        var(--glass);
-      border-radius: var(--r-lg);
-      padding: var(--s8) var(--s3);
-    }
-    .cta-final .lead { margin: var(--s2) auto 0; }
-    .cta-final .btn { margin-top: var(--s4); }
-    .booking-embed {
-      margin-top: var(--s6);
-      border: 1px solid var(--border); border-radius: var(--r-lg); overflow: hidden;
-      background: var(--bg-elev);
-    }
-    .booking-embed iframe { width: 100%; min-height: 640px; border: none; display: block; }
-
-    /* ============ STICKY CTA MOBILE ============ */
-    .sticky-cta {
-      position: fixed; left: var(--s2); right: var(--s2); bottom: var(--s2); z-index: 90;
-      transform: translateY(140%);
-      transition: transform 0.35s ease;
-    }
-    .sticky-cta.visible { transform: translateY(0); }
-    .sticky-cta .btn { width: 100%; box-shadow: 0 12px 40px rgba(0, 0, 0, 0.6), 0 8px 28px rgba(108, 71, 255, 0.35); }
-    @media (min-width: 900px) { .sticky-cta { display: none; } }
-
-    /* ============ FOOTER ============ */
-    .site-footer {
-      border-top: 1px solid var(--border);
-      padding: var(--s8) 0 var(--s4);
-      background: linear-gradient(180deg, rgba(108, 71, 255, 0.06), transparent 45%), var(--bg-elev);
-    }
-    .footer-cta {
-      display: flex; justify-content: space-between; align-items: center; gap: var(--s3); flex-wrap: wrap;
-      padding-bottom: var(--s5); margin-bottom: var(--s5);
-      border-bottom: 1px solid var(--border);
-    }
-    .footer-cta p {
-      font-family: var(--font-display);
-      font-size: clamp(19px, 2.4vw, 24px); font-weight: 700; letter-spacing: -0.01em;
-    }
-    .footer-grid { display: grid; gap: var(--s5); padding-bottom: var(--s5); border-bottom: 1px solid var(--border); }
-    @media (min-width: 768px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr; } }
-    .footer-tagline { color: var(--muted); font-size: 14px; margin: var(--s2) 0; max-width: 300px; }
-    .footer-legal-id { color: var(--faint); font-size: 12px; line-height: 1.9; }
-    .footer-title { font-size: 11px; letter-spacing: 0.24em; text-transform: uppercase; color: var(--accent-2); margin-bottom: var(--s2); font-weight: 700; font-family: var(--font-display); }
-    .footer-col ul { list-style: none; display: flex; flex-direction: column; gap: 10px; }
-    .footer-col a, .footer-col li { color: var(--muted); font-size: 14px; text-decoration: none; }
-    .footer-col a { transition: color 0.2s; }
-    .footer-col a:hover { color: var(--fg); }
-    .footer-bottom { padding-top: var(--s3); display: flex; flex-direction: column; gap: var(--s1); }
-    .footer-bottom p { font-size: 12px; color: var(--faint); line-height: 1.7; }
-    .footer-bottom a { color: var(--muted); }
-    .footer-cookie-btn { background: none; border: none; cursor: pointer; color: var(--muted); font-size: 14px; padding: 0; text-align: left; font-family: var(--font-body); transition: color 0.2s; }
-    .footer-cookie-btn:hover { color: var(--fg); }
-
-    /* ============ COOKIE BANNER ============ */
-    .cookie-banner {
-      position: fixed; bottom: var(--s2); left: var(--s2); right: var(--s2);
-      max-width: 620px; z-index: 200;
-      background: rgba(19, 13, 34, 0.96);
-      backdrop-filter: blur(16px);
-      -webkit-backdrop-filter: blur(16px);
-      border: 1px solid var(--border); border-radius: var(--r-md);
-      padding: var(--s3);
-      display: none; flex-direction: column; gap: var(--s2);
-      box-shadow: 0 24px 60px rgba(0, 0, 0, 0.7);
-    }
-    .cookie-banner.visible { display: flex; }
-    .cookie-banner p { font-size: 13px; color: var(--muted); }
-    .cookie-banner a { color: var(--accent); }
-    .cookie-actions { display: flex; gap: var(--s1); flex-wrap: wrap; }
-
-    /* ============ REVEAL ============ */
-    .reveal { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
-    .reveal.in { opacity: 1; transform: translateY(0); }
-
-    /* ============ A11Y ============ */
-    .skip-link {
-      position: absolute; left: -9999px; top: 0; z-index: 300;
-      background: var(--accent); color: #fff; padding: var(--s1) var(--s2);
-      border-radius: 0 0 var(--r-sm) 0; text-decoration: none; font-weight: 600;
-    }
-    .skip-link:focus { left: 0; }
-    a:focus-visible, button:focus-visible, summary:focus-visible {
-      outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px;
-    }
-    @media (prefers-reduced-motion: reduce) {
-      html { scroll-behavior: auto; }
-      *, *::before, *::after {
-        animation-duration: 0.001ms !important;
-        animation-iteration-count: 1 !important;
-        transition-duration: 0.001ms !important;
-      }
-      .reveal { opacity: 1; transform: none; }
-    }
-  </style>
+  <link rel="stylesheet" href="/assets/css/main.css">
 </head>
 <body>
   <a class="skip-link" href="#main">Aller au contenu</a>
@@ -474,7 +62,7 @@
   <header class="site-header">
     <div class="header-inner">
       <a class="brand" href="#" aria-label="Matrix, retour en haut">
-        <img src="matrix-logo.webp" alt="" width="26" height="26" decoding="async">
+        <img src="/assets/img/matrix-logo.webp" alt="" width="26" height="26" decoding="async">
         Matrix<span>™</span>
       </a>
       <nav class="header-nav" aria-label="Navigation principale">
@@ -501,10 +89,15 @@
               <a class="btn btn-primary" href="#reserver">Réserver un appel stratégique</a>
               <a class="btn btn-ghost" href="#methode">Voir la méthode</a>
             </div>
-            <p class="hero-note">Appel de qualification gratuit. Accompagnement complet de 45 jours : 2 400 €.</p>
+            <p class="hero-note">Accompagnement complet de 45 jours : 2 400 €.</p>
+            <ul class="hero-trust" aria-label="Réassurance">
+              <li>Appel gratuit de 30 min</li>
+              <li>Sans engagement</li>
+              <li>Réponse sous 24 h</li>
+            </ul>
           </div>
           <div class="hero-visual reveal">
-            <img src="riseup.webp" alt="Tableau de bord : 64 rendez-vous créés sur un mois" width="932" height="644" fetchpriority="high" decoding="async">
+            <img src="/assets/img/riseup.webp" alt="Tableau de bord : 64 rendez-vous créés sur un mois" width="932" height="644" fetchpriority="high" decoding="async">
           </div>
         </div>
 
@@ -528,20 +121,21 @@
         <div class="pain-grid">
           <article class="card reveal">
             <span class="pain-num">01</span>
-            <h3>Tu dépends du bouche-à-oreille</h3>
-            <p>Des mois pleins, des mois vides. Impossible de prévoir ton chiffre, encore moins de recruter ou d'investir.</p>
+            <h3>Le 25 du mois, ton agenda est vide</h3>
+            <p>Aucun RDV planifié, et tu sais que ça se verra sur ta trésorerie dans six semaines. Alors tu attends la prochaine recommandation. Elle arrive quand elle veut.</p>
           </article>
           <article class="card reveal">
             <span class="pain-num">02</span>
-            <h3>Tu publies sans retour</h3>
-            <p>Des posts, des vues, des likes. Mais zéro conversation sérieuse et zéro RDV dans l'agenda.</p>
+            <h3>Tu publies, il ne se passe rien</h3>
+            <p>Des likes de tes pairs, aucun message de prospect. Tu finis par croire que LinkedIn ne marche pas pour ton métier. Faux : il ne marche pas sans système.</p>
           </article>
           <article class="card reveal">
             <span class="pain-num">03</span>
-            <h3>Tu prospectes sans système</h3>
-            <p>Des messages envoyés au hasard, sans suivi ni cadence. Les leads chauds refroidissent, tu recommences de zéro.</p>
+            <h3>Tu prospectes à l'instinct</h3>
+            <p>Des messages improvisés, des relances oubliées. Pendant que tu livres tes clients, tes leads chauds refroidissent. Et chaque mois, tu repars de zéro.</p>
           </article>
         </div>
+        <p class="pain-bridge reveal">Si tu t'es reconnu dans une seule de ces situations, la suite te concerne directement.</p>
       </div>
     </section>
 
@@ -571,92 +165,6 @@
             <h3>Scaler</h3>
             <p>On convertit les leads chauds et dormants en clients avec des campagnes de nurturing activées en parallèle.</p>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- PREUVES -->
-    <section id="preuves" aria-label="Résultats clients">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="kicker">Résultats documentés</span>
-          <h2>Ils l'ont fait avant toi.</h2>
-        </div>
-        <div class="proof-grid">
-          <article class="card proof-card reveal">
-            <img src="case-64rdv.webp" alt="Capture : 64 rendez-vous qualifiés bookés en 30 jours" width="1150" height="654" loading="lazy" decoding="async">
-            <div class="proof-body">
-              <h3>Agence de consulting</h3>
-              <p>64 rendez-vous qualifiés bookés en 30 jours grâce au système Matrix™. Chiffres de septembre 2024.</p>
-              <div class="proof-metrics">
-                <div><strong>+64</strong><span>RDV / mois</span></div>
-              </div>
-            </div>
-          </article>
-          <article class="card proof-card reveal">
-            <img src="case-serkan.webp" alt="Capture : 376 460 impressions LinkedIn en 365 jours" width="1150" height="640" loading="lazy" decoding="async">
-            <div class="proof-body">
-              <h3>Conseiller en gestion de patrimoine</h3>
-              <p>376 460 impressions en 365 jours et une audience qui devient une source régulière de conversations.</p>
-              <div class="proof-metrics">
-                <div><strong>+3 135</strong><span>abonnés</span></div>
-                <div><strong>+15,1 %</strong><span>croissance</span></div>
-              </div>
-            </div>
-          </article>
-          <article class="card proof-card reveal">
-            <img src="case-thibault.webp" alt="Capture : 10 RDV qualifiés, 3 clients signés" width="1150" height="650" loading="lazy" decoding="async">
-            <div class="proof-body">
-              <h3>Immobilier &amp; investissement</h3>
-              <p>Objectif atteint : toucher des fondateurs d'agences finance et immobilier, et créer un levier commercial fiable.</p>
-              <div class="proof-metrics">
-                <div><strong>10</strong><span>RDV qualifiés</span></div>
-                <div><strong>3</strong><span>clients signés</span></div>
-              </div>
-            </div>
-          </article>
-          <article class="card proof-card reveal">
-            <img src="case-coaching-setting.webp" alt="Capture : premier rendez-vous ciblé après la première session" width="1150" height="642" loading="lazy" decoding="async">
-            <div class="proof-body">
-              <h3>Agence web / UX</h3>
-              <p>Un rendez-vous ciblé dès la première session, réponse en moins de 24 h et une première signature de coaching.</p>
-              <div class="proof-metrics">
-                <div><strong>1</strong><span>RDV qualifié</span></div>
-                <div><strong>&lt; 24 h</strong><span>de réponse</span></div>
-              </div>
-            </div>
-          </article>
-        </div>
-        <p class="proof-disclaimer">Résultats individuels obtenus par des clients Matrix™ sur les périodes indiquées. Non représentatifs d'une moyenne. <a href="avertissement-resultats.html">Avertissement complet sur les résultats</a>.</p>
-      </div>
-    </section>
-
-    <!-- ICP -->
-    <section aria-label="Pour qui">
-      <div class="container">
-        <div class="section-head reveal">
-          <span class="kicker">On ne travaille pas avec tout le monde</span>
-          <h2>Matrix™ est fait pour toi. Ou pas.</h2>
-        </div>
-        <div class="icp-grid">
-          <div class="card icp-col icp-yes reveal">
-            <h3><span class="icp-dot" aria-hidden="true"></span>C'est pour toi si</h3>
-            <ul>
-              <li>Tu es freelance, agence ou consultant B2B avec une offre déjà validée par des clients.</li>
-              <li>Tes clients ont un panier moyen suffisant pour rentabiliser 2 à 3 signatures.</li>
-              <li>Tu peux consacrer quelques heures par semaine à ton acquisition pendant 45 jours.</li>
-              <li>Tu veux un système que tu gardes, pas une prestation qui s'arrête quand on part.</li>
-            </ul>
-          </div>
-          <div class="card icp-col icp-no reveal">
-            <h3><span class="icp-dot" aria-hidden="true"></span>Ce n'est pas pour toi si</h3>
-            <ul>
-              <li>Tu n'as pas encore d'offre ni de premier client : Matrix™ accélère, il ne crée pas ton métier.</li>
-              <li>Tu cherches des résultats sans rien exécuter toi-même.</li>
-              <li>Tu vends uniquement en B2C.</li>
-              <li>Tu attends une promesse de gains garantis. Personne de sérieux ne peut te promettre ça.</li>
-            </ul>
-          </div>
         </div>
       </div>
     </section>
@@ -735,6 +243,92 @@
       </div>
     </section>
 
+    <!-- PREUVES -->
+    <section id="preuves" aria-label="Résultats clients">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">Résultats documentés</span>
+          <h2>Ils l'ont fait avant toi.</h2>
+        </div>
+        <div class="proof-grid">
+          <article class="card proof-card reveal">
+            <img src="/assets/img/case-64rdv.webp" alt="Capture : 64 rendez-vous qualifiés bookés en 30 jours" width="1150" height="654" loading="lazy" decoding="async">
+            <div class="proof-body">
+              <h3>Agence de consulting</h3>
+              <p>64 rendez-vous qualifiés bookés en 30 jours grâce au système Matrix™. Chiffres de septembre 2024.</p>
+              <div class="proof-metrics">
+                <div><strong>+64</strong><span>RDV / mois</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="card proof-card reveal">
+            <img src="/assets/img/case-serkan.webp" alt="Capture : 376 460 impressions LinkedIn en 365 jours" width="1150" height="640" loading="lazy" decoding="async">
+            <div class="proof-body">
+              <h3>Conseiller en gestion de patrimoine</h3>
+              <p>376 460 impressions en 365 jours et une audience qui devient une source régulière de conversations.</p>
+              <div class="proof-metrics">
+                <div><strong>+3 135</strong><span>abonnés</span></div>
+                <div><strong>+15,1 %</strong><span>croissance</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="card proof-card reveal">
+            <img src="/assets/img/case-thibault.webp" alt="Capture : 10 RDV qualifiés, 3 clients signés" width="1150" height="650" loading="lazy" decoding="async">
+            <div class="proof-body">
+              <h3>Immobilier &amp; investissement</h3>
+              <p>Objectif atteint : toucher des fondateurs d'agences finance et immobilier, et créer un levier commercial fiable.</p>
+              <div class="proof-metrics">
+                <div><strong>10</strong><span>RDV qualifiés</span></div>
+                <div><strong>3</strong><span>clients signés</span></div>
+              </div>
+            </div>
+          </article>
+          <article class="card proof-card reveal">
+            <img src="/assets/img/case-coaching-setting.webp" alt="Capture : premier rendez-vous ciblé après la première session" width="1150" height="642" loading="lazy" decoding="async">
+            <div class="proof-body">
+              <h3>Agence web / UX</h3>
+              <p>Un rendez-vous ciblé dès la première session, réponse en moins de 24 h et une première signature de coaching.</p>
+              <div class="proof-metrics">
+                <div><strong>1</strong><span>RDV qualifié</span></div>
+                <div><strong>&lt; 24 h</strong><span>de réponse</span></div>
+              </div>
+            </div>
+          </article>
+        </div>
+        <p class="proof-disclaimer">Résultats individuels obtenus par des clients Matrix™ sur les périodes indiquées. Non représentatifs d'une moyenne. <a href="/legal/avertissement-resultats">Avertissement complet sur les résultats</a>.</p>
+      </div>
+    </section>
+
+    <!-- ICP -->
+    <section aria-label="Pour qui">
+      <div class="container">
+        <div class="section-head reveal">
+          <span class="kicker">On ne travaille pas avec tout le monde</span>
+          <h2>Matrix™ est fait pour toi. Ou pas.</h2>
+        </div>
+        <div class="icp-grid">
+          <div class="card icp-col icp-yes reveal">
+            <h3><span class="icp-dot" aria-hidden="true"></span>C'est pour toi si</h3>
+            <ul>
+              <li>Tu es freelance, agence ou consultant B2B avec une offre déjà validée par des clients.</li>
+              <li>Tes clients ont un panier moyen suffisant pour rentabiliser 2 à 3 signatures.</li>
+              <li>Tu peux consacrer quelques heures par semaine à ton acquisition pendant 45 jours.</li>
+              <li>Tu veux un système que tu gardes, pas une prestation qui s'arrête quand on part.</li>
+            </ul>
+          </div>
+          <div class="card icp-col icp-no reveal">
+            <h3><span class="icp-dot" aria-hidden="true"></span>Ce n'est pas pour toi si</h3>
+            <ul>
+              <li>Tu n'as pas encore d'offre ni de premier client : Matrix™ accélère, il ne crée pas ton métier.</li>
+              <li>Tu cherches des résultats sans rien exécuter toi-même.</li>
+              <li>Tu vends uniquement en B2C.</li>
+              <li>Tu attends une promesse de gains garantis. Personne de sérieux ne peut te promettre ça.</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- FAQ -->
     <section id="faq" aria-label="Questions fréquentes">
       <div class="container">
@@ -757,7 +351,7 @@
           </details>
           <details>
             <summary>Vous garantissez des résultats ?</summary>
-            <p class="faq-a">Non, et méfie-toi de ceux qui le font. On te montre des résultats réels et documentés de clients, on filtre à l'entrée pour ne prendre que des profils où la méthode a du sens, et tout est encadré par nos <a href="conditions-generales.html">conditions générales</a>.</p>
+            <p class="faq-a">Non, et méfie-toi de ceux qui le font. On te montre des résultats réels et documentés de clients, on filtre à l'entrée pour ne prendre que des profils où la méthode a du sens, et tout est encadré par nos <a href="/legal/conditions-generales">conditions générales</a>.</p>
           </details>
           <details>
             <summary>Qu'est-ce qui se passe après les 45 jours ?</summary>
@@ -794,7 +388,7 @@
 
   <!-- COOKIE BANNER -->
   <div class="cookie-banner" id="cookie-banner" role="dialog" aria-modal="false" aria-label="Gestion des cookies">
-    <p><strong>Cookies.</strong> On utilise des cookies pour faire fonctionner le site et, avec ton accord, mesurer l'audience. <a href="politique-cookies.html">Politique cookies</a></p>
+    <p><strong>Cookies.</strong> On utilise des cookies pour faire fonctionner le site et, avec ton accord, mesurer l'audience. <a href="/legal/politique-cookies">Politique cookies</a></p>
     <div class="cookie-actions">
       <button class="btn btn-ghost btn-sm" data-cookie="refused">Refuser tout</button>
       <button class="btn btn-primary btn-sm" data-cookie="accepted">Accepter tout</button>
@@ -811,7 +405,7 @@
       <div class="footer-grid">
         <div>
           <a class="brand" href="#">
-            <img src="matrix-logo.webp" alt="" width="26" height="26" loading="lazy" decoding="async">
+            <img src="/assets/img/matrix-logo.webp" alt="" width="26" height="26" loading="lazy" decoding="async">
             Matrix<span>™</span>
           </a>
           <p class="footer-tagline">Le système d'acquisition LinkedIn structuré pour freelances, agences et consultants B2B.</p>
@@ -834,11 +428,11 @@
         <nav class="footer-col" aria-label="Informations légales">
           <p class="footer-title">Légal</p>
           <ul>
-            <li><a href="mentions-legales.html">Mentions légales</a></li>
-            <li><a href="conditions-generales.html">Conditions générales</a></li>
-            <li><a href="politique-de-confidentialite.html">Confidentialité</a></li>
-            <li><a href="politique-cookies.html">Politique cookies</a></li>
-            <li><a href="avertissement-resultats.html">Avertissement résultats</a></li>
+            <li><a href="/legal/mentions-legales">Mentions légales</a></li>
+            <li><a href="/legal/conditions-generales">Conditions générales</a></li>
+            <li><a href="/legal/politique-de-confidentialite">Confidentialité</a></li>
+            <li><a href="/legal/politique-cookies">Politique cookies</a></li>
+            <li><a href="/legal/avertissement-resultats">Avertissement résultats</a></li>
             <li><button class="footer-cookie-btn" id="manage-cookies">Gérer mes cookies</button></li>
           </ul>
         </nav>
@@ -854,96 +448,12 @@
       </div>
       <div class="footer-bottom">
         <p>© 2024–<span id="footer-year">2026</span> Eya Azouzi (Depro Agency). Tous droits réservés. Matrix™ est une marque exploitée par Eya Azouzi.</p>
-        <p>Les résultats présentés sont des cas clients réels et documentés. Ils ne constituent ni une garantie, ni une promesse de résultat identique. <a href="avertissement-resultats.html">Avertissement sur les résultats</a>.</p>
+        <p>Les résultats présentés sont des cas clients réels et documentés. Ils ne constituent ni une garantie, ni une promesse de résultat identique. <a href="/legal/avertissement-resultats">Avertissement sur les résultats</a>.</p>
         <p>Ce site n'est ni affilié, ni sponsorisé, ni approuvé par LinkedIn Corporation.</p>
       </div>
     </div>
   </footer>
 
-  <script>
-    (function () {
-      "use strict";
-      var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
-
-      // Année footer
-      document.getElementById("footer-year").textContent = new Date().getFullYear();
-
-      // Cookie banner
-      var banner = document.getElementById("cookie-banner");
-      if (!localStorage.getItem("cookie-choice")) banner.classList.add("visible");
-      banner.querySelectorAll("[data-cookie]").forEach(function (btn) {
-        btn.addEventListener("click", function () {
-          localStorage.setItem("cookie-choice", btn.dataset.cookie);
-          banner.classList.remove("visible");
-        });
-      });
-      document.getElementById("manage-cookies").addEventListener("click", function () {
-        localStorage.removeItem("cookie-choice");
-        banner.classList.add("visible");
-      });
-
-      // Reveal au scroll (stagger par lot)
-      var revealEls = document.querySelectorAll(".reveal");
-      if (reduced || !("IntersectionObserver" in window)) {
-        revealEls.forEach(function (el) { el.classList.add("in"); });
-      } else {
-        var io = new IntersectionObserver(function (entries) {
-          var delay = 0;
-          entries.forEach(function (entry) {
-            if (!entry.isIntersecting) return;
-            var el = entry.target;
-            setTimeout(function () { el.classList.add("in"); }, delay);
-            delay += 90;
-            io.unobserve(el);
-          });
-        }, { threshold: 0.15, rootMargin: "0px 0px -40px 0px" });
-        revealEls.forEach(function (el) { io.observe(el); });
-      }
-
-      // Compteurs KPI
-      function animateCount(el) {
-        var target = parseInt(el.dataset.target, 10);
-        var isK = el.dataset.format === "k";
-        if (reduced) {
-          el.textContent = isK ? target.toLocaleString("fr-FR") : String(target);
-          return;
-        }
-        var dur = 1400, start = null;
-        function frame(ts) {
-          if (!start) start = ts;
-          var p = Math.min((ts - start) / dur, 1);
-          var eased = 1 - Math.pow(1 - p, 3);
-          var val = Math.round(target * eased);
-          el.textContent = isK ? val.toLocaleString("fr-FR") : String(val);
-          if (p < 1) requestAnimationFrame(frame);
-        }
-        requestAnimationFrame(frame);
-      }
-      var counters = document.querySelectorAll(".count");
-      if ("IntersectionObserver" in window && !reduced) {
-        var cio = new IntersectionObserver(function (entries) {
-          entries.forEach(function (entry) {
-            if (!entry.isIntersecting) return;
-            animateCount(entry.target);
-            cio.unobserve(entry.target);
-          });
-        }, { threshold: 0.5 });
-        counters.forEach(function (el) { cio.observe(el); });
-      } else {
-        counters.forEach(animateCount);
-      }
-
-      // Sticky CTA mobile : visible après le hero, masqué sur la section réservation
-      var sticky = document.getElementById("sticky-cta");
-      var hero = document.querySelector(".hero");
-      var booking = document.getElementById("reserver");
-      var pastHero = false, onBooking = false;
-      function refresh() { sticky.classList.toggle("visible", pastHero && !onBooking); }
-      if ("IntersectionObserver" in window) {
-        new IntersectionObserver(function (e) { pastHero = !e[0].isIntersecting; refresh(); }, { threshold: 0 }).observe(hero);
-        new IntersectionObserver(function (e) { onBooking = e[0].isIntersecting; refresh(); }, { threshold: 0 }).observe(booking);
-      }
-    })();
-  </script>
+  <script src="/assets/js/main.js" defer></script>
 </body>
 </html>
