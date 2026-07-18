@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://matrix-landing-taupe.vercel.app/sitemap.xml
