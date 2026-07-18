@@ -4,6 +4,51 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Matrix™ — Acquisition B2B fiable en 45 jours</title>
+  <meta name="description" content="Matrix™ : le système d'acquisition structuré pour freelances & agences B2B. 2 à 3 clients supplémentaires chaque mois grâce à la méthode M.S.S. en 45 jours.">
+  <meta name="robots" content="index, follow">
+  <meta name="theme-color" content="#03050a">
+  <link rel="canonical" href="https://matrix-landing-taupe.vercel.app/">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png">
+  <link rel="icon" type="image/png" sizes="512x512" href="/favicon-512.png">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="preconnect" href="https://app.iclosed.io" crossorigin>
+  <link rel="dns-prefetch" href="https://app.iclosed.io">
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="Matrix™">
+  <meta property="og:locale" content="fr_FR">
+  <meta property="og:title" content="Matrix™ — Acquisition B2B fiable en 45 jours">
+  <meta property="og:description" content="Le système d'acquisition structuré pour freelances & agences B2B. 2 à 3 clients supplémentaires chaque mois.">
+  <meta property="og:url" content="https://matrix-landing-taupe.vercel.app/">
+  <meta property="og:image" content="https://matrix-landing-taupe.vercel.app/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Matrix™ — Acquisition B2B fiable en 45 jours">
+  <meta name="twitter:description" content="Le système d'acquisition structuré pour freelances & agences B2B.">
+  <meta name="twitter:image" content="https://matrix-landing-taupe.vercel.app/og-image.png">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ProfessionalService",
+    "name": "Matrix™",
+    "description": "Système d'acquisition B2B structuré pour freelances et agences.",
+    "url": "https://matrix-landing-taupe.vercel.app/",
+    "email": "deprodesign1@gmail.com",
+    "telephone": "+32486129708",
+    "founder": { "@type": "Person", "name": "Eya Azouzi" },
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Avenue Paul Hymans 122 b38",
+      "postalCode": "1200",
+      "addressLocality": "Woluwe-Saint-Lambert",
+      "addressCountry": "BE"
+    },
+    "areaServed": "Europe",
+    "sameAs": ["https://www.linkedin.com/in/dpagency-be/"]
+  }
+  </script>
   <style>
     html {
       scroll-behavior: smooth;
@@ -987,6 +1032,28 @@
       color: #9aa3b2;
       border: 1px solid rgba(255, 255, 255, 0.1);
     }
+    /* Accessibilité : focus clavier visible */
+    a:focus-visible,
+    button:focus-visible,
+    .btn:focus-visible,
+    .timeline-step:focus-visible {
+      outline: 2px solid var(--accent);
+      outline-offset: 3px;
+      border-radius: 8px;
+    }
+    /* Respect des préférences de mouvement réduit */
+    @media (prefers-reduced-motion: reduce) {
+      * {
+        animation-duration: 0.001ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.001ms !important;
+        scroll-behavior: auto !important;
+      }
+      .kpi-slider,
+      .feedback-slider {
+        animation: none !important;
+      }
+    }
   </style>
 </head>
 <body>
@@ -1004,14 +1071,14 @@
       <div class="hero-actions">
           <a class="btn primary with-logo" href="#calendly-embed">
             J'accède au système
-            <img src="Matrix Logo.jpg" alt="Matrix logo" class="btn-logo">
+            <img loading="lazy" decoding="async" width="1024" height="1024" src="matrix-logo.webp" alt="Matrix logo" class="btn-logo">
           </a>
         </div>
       </div>
       <div class="hero-media">
         <div class="hero-screen">
           <div class="hero-screen-glow"></div>
-          <img class="zoomable" src="Riseup.png" alt="Riseup timeline">
+          <img fetchpriority="high" decoding="async" width="932" height="644" class="zoomable" src="riseup.webp" alt="Riseup timeline">
         </div>
       </div>
     </section>
@@ -1028,7 +1095,7 @@
           <div class="case-track">
             <article class="case-card">
               <div class="case-media">
-                <img class="zoomable" src="case-64rdv.png" alt="+64 rendez-vous qualifiés">
+                <img loading="lazy" decoding="async" width="1150" height="654" class="zoomable" src="case-64rdv.webp" alt="+64 rendez-vous qualifiés">
               </div>
               <div class="case-info">
                 <p class="case-label">Agence de Consulting</p>
@@ -1042,7 +1109,7 @@
             </article>
             <article class="case-card">
               <div class="case-media">
-                <img class="zoomable" src="case-coaching-setting.png" alt="Réussite coaching">
+                <img loading="lazy" decoding="async" width="1150" height="642" class="zoomable" src="case-coaching-setting.webp" alt="Réussite coaching">
               </div>
               <div class="case-info">
                 <p class="case-label">Agence Web - UX</p>
@@ -1056,7 +1123,7 @@
             </article>
             <article class="case-card">
               <div class="case-media">
-                <img class="zoomable" src="case-serkan.png" alt="Trace Conseiller en Gestion de Patrimoine">
+                <img loading="lazy" decoding="async" width="1150" height="640" class="zoomable" src="case-serkan.webp" alt="Trace Conseiller en Gestion de Patrimoine">
               </div>
               <div class="case-info">
                 <p class="case-label">Conseiller en Gestion de Patrimoine</p>
@@ -1070,7 +1137,7 @@
             </article>
             <article class="case-card">
               <div class="case-media">
-                <img class="zoomable" src="case-thibault.png" alt="Cas Thibault">
+                <img loading="lazy" decoding="async" width="1150" height="650" class="zoomable" src="case-thibault.webp" alt="Cas Thibault">
               </div>
               <div class="case-info">
                 <p class="case-label">Immobilier & Invest</p>
@@ -1111,7 +1178,7 @@
       <p class="proof-disclaimer">Résultats individuels obtenus par des clients Matrix™ sur les périodes indiquées. Non représentatifs de la moyenne. <a href="avertissement-resultats.html">Voir l'avertissement complet sur les résultats.</a></p>
     </section>
 
-    <section class="process" aria-label="Comment fonctionne Matrix™">
+    <section class="process" id="methode" aria-label="Comment fonctionne Matrix™">
       <div class="process-header">
         <h2>Comment Matrix™ fonctionne</h2>
         <p class="process-subtitle">La méthode M.S.S. combine modélisation, structure et scalabilité pour aller chercher vos 2 à 3 clients supplémentaires chaque mois.</p>
@@ -1141,7 +1208,7 @@
           <p>Objectif : transformer les leads chauds et dormants en clients grâce à nos campagnes de nurturing (activées en parallèle).</p>
         </article>
         <div class="phase-media">
-          <img class="zoomable" src="method-creative.png" alt="Workshop Matrix">
+          <img loading="lazy" decoding="async" width="1600" height="646" class="zoomable" src="method-creative.webp" alt="Workshop Matrix">
         </div>
       </div>
     </section>
@@ -1149,20 +1216,20 @@
     <section class="kpi-slider-section" aria-label="KPI highlights">
       <div class="kpi-slider">
         <div class="kpi-slide">
-          <img class="zoomable" src="KPI.JPG" alt="KPI aperçu 1">
+          <img loading="lazy" decoding="async" width="1290" height="1268" class="zoomable" src="kpi.webp" alt="KPI aperçu 1">
         </div>
         <div class="kpi-slide">
-          <img class="zoomable" src="KPI 2.png" alt="KPI aperçu 2">
+          <img loading="lazy" decoding="async" width="1203" height="721" class="zoomable" src="kpi-2.webp" alt="KPI aperçu 2">
         </div>
         <div class="kpi-slide">
           <div class="kpi-stack">
-            <img class="zoomable" src="1300.jpg" alt="Phase Matrix KPI additionnel">
-            <img class="zoomable" src="1395.jpeg" alt="Phase Matrix KPI complément">
-            <img class="zoomable" src="1745.jpeg" alt="Phase Matrix KPI extension">
+            <img loading="lazy" decoding="async" width="1290" height="242" class="zoomable" src="1300.webp" alt="Phase Matrix KPI additionnel">
+            <img loading="lazy" decoding="async" width="1290" height="270" class="zoomable" src="1395.webp" alt="Phase Matrix KPI complément">
+            <img loading="lazy" decoding="async" width="1290" height="232" class="zoomable" src="1745.webp" alt="Phase Matrix KPI extension">
           </div>
         </div>
         <div class="kpi-slide">
-          <img class="zoomable" src="Impression.png" alt="Statistiques impression">
+          <img loading="lazy" decoding="async" width="421" height="158" class="zoomable" src="impression.webp" alt="Statistiques impression">
         </div>
       </div>
     </section>
@@ -1174,17 +1241,17 @@
       <div class="before-after-grid">
         <article class="before-card" data-label="Avant">
           <div class="card-title">Étape 1</div>
-          <img class="zoomable" src="Avant.png" alt="Avant Matrix">
+          <img loading="lazy" decoding="async" width="1590" height="474" class="zoomable" src="avant.webp" alt="Avant Matrix">
           <p class="before-engagement">→ <strong>Au départ</strong> : <span class="stat-number stat-number-negative">6 vues de profils</span>, <span class="stat-number stat-number-negative">0 impression de post</span>, <span class="stat-number stat-number-negative">3 apparitions dans les recherches</span>. Cela illustre une activité froide sans engagement humain ni signe de suivi.</p>
         </article>
         <article class="after-card" data-label="Après">
           <div class="card-title">Étape 2</div>
-          <img class="zoomable" src="Après.png" alt="Après Matrix">
+          <img loading="lazy" decoding="async" width="1533" height="619" class="zoomable" src="apres.webp" alt="Après Matrix">
           <p class="after-engagement">→ Après : <span class="stat-number stat-number-positive">14 249 impressions</span> (<span class="stat-number stat-number-positive">+232 %</span> <span class="stat-number stat-number-positive">sur 14 jours</span>), pics de visibilité et conversations plus régulières, comme l’illustre cette courbe qui grimpe vers la fin de la période.</p>
         </article>
         <article class="riseup-card" data-label="Riseup">
           <div class="card-title">Étape 3</div>
-          <img class="zoomable" src="Riseup.png" alt="Riseup suivi">
+          <img loading="lazy" decoding="async" width="932" height="644" class="zoomable" src="riseup.webp" alt="Riseup suivi">
           <p class="riseup-engagement">→ <strong>Résultat final</strong> : <span class="stat-number stat-number-positive">+64 rdv bookés par mois</span>, plus de <span class="stat-number stat-number-positive">13k€ contrats signés</span> sur le 1er mois.</p>
         </article>
       </div>
@@ -1200,22 +1267,22 @@
       </header>
       <div class="feedback-slider">
         <div class="feedback-slide">
-          <img class="zoomable" src="Retour-1.png" alt="Retour client 1">
+          <img loading="lazy" decoding="async" width="1290" height="473" class="zoomable" src="retour-1.webp" alt="Retour client 1">
         </div>
         <div class="feedback-slide">
-          <img class="zoomable" src="Retour-2.png" alt="Retour client 2">
+          <img loading="lazy" decoding="async" width="890" height="400" class="zoomable" src="retour-2.webp" alt="Retour client 2">
         </div>
         <div class="feedback-slide">
-          <img class="zoomable" src="Retour-3.png" alt="Retour client 3">
+          <img loading="lazy" decoding="async" width="1290" height="363" class="zoomable" src="retour-3.webp" alt="Retour client 3">
         </div>
         <div class="feedback-slide">
-          <img class="zoomable" src="Retour-4.png" alt="Retour client 4">
+          <img loading="lazy" decoding="async" width="648" height="353" class="zoomable" src="retour-4.webp" alt="Retour client 4">
         </div>
         <div class="feedback-slide">
-          <img class="zoomable" src="Retour-5.png" alt="Retour client 5">
+          <img loading="lazy" decoding="async" width="1290" height="637" class="zoomable" src="retour-5.webp" alt="Retour client 5">
         </div>
         <div class="feedback-slide">
-          <img class="zoomable" src="Retour-6.png" alt="Retour client 6">
+          <img loading="lazy" decoding="async" width="830" height="427" class="zoomable" src="retour-6.webp" alt="Retour client 6">
         </div>
       </div>
     </section>
