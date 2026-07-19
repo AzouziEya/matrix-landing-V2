@@ -70,14 +70,16 @@
     counters.forEach(animateCount);
   }
 
-  // Sticky CTA mobile : visible après le hero, masqué sur la section réservation
+  // Sticky CTA : visible dès le premier scroll, masqué sur la section réservation
   var sticky = document.getElementById("sticky-cta");
-  var hero = document.querySelector(".hero");
   var booking = document.getElementById("reserver");
-  var pastHero = false, onBooking = false;
-  function refresh() { sticky.classList.toggle("visible", pastHero && !onBooking); }
+  var scrolled = false, onBooking = false;
+  function refresh() { sticky.classList.toggle("visible", scrolled && !onBooking); }
+  window.addEventListener("scroll", function () {
+    var past = window.scrollY > 300;
+    if (past !== scrolled) { scrolled = past; refresh(); }
+  }, { passive: true });
   if ("IntersectionObserver" in window) {
-    new IntersectionObserver(function (e) { pastHero = !e[0].isIntersecting; refresh(); }, { threshold: 0 }).observe(hero);
     new IntersectionObserver(function (e) { onBooking = e[0].isIntersecting; refresh(); }, { threshold: 0 }).observe(booking);
   }
 })();
