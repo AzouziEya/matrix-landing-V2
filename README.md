@@ -21,9 +21,16 @@ Site statique, sans framework ni build : ce qui est dans le repo est ce qui est 
 │   │   ├── main.css        # Design system + styles de la landing
 │   │   └── legal.css       # Styles communs aux pages légales
 │   ├── js/
-│   │   └── main.js         # Interactions : reveal au scroll, compteurs, cookies, sticky CTA
+│   │   └── main.js         # Interactions : reveal, compteurs, cookies, sticky CTA, progression
 │   └── img/                # Images WebP optimisées + favicons + og-image
+├── docs/
+│   └── design-system.md    # Référence DA : tokens, typo, composants, règles
+├── .github/
+│   └── pull_request_template.md
 ├── vercel.json             # Headers sécurité (CSP, HSTS), redirections, cache
+├── CHANGELOG.md            # Historique des évolutions
+├── .editorconfig
+├── .gitignore
 ├── robots.txt
 ├── sitemap.xml
 └── README.md
@@ -42,8 +49,8 @@ Site statique, sans framework ni build : ce qui est dans le repo est ce qui est 
 
 ## Règles du design system
 
-- Couleurs, espacements (grille 8pt), rayons et polices sont des variables CSS dans `:root` (`assets/css/main.css`). Toujours les utiliser, jamais de valeurs en dur.
-- Polices : Montserrat (titres, boutons) et Inter (texte), chargées via Google Fonts.
+- Couleurs, espacements (grille 8pt), rayons et polices sont des variables CSS dans `:root` (`assets/css/main.css`). Toujours les utiliser, jamais de valeurs en dur. Référence complète : [`docs/design-system.md`](docs/design-system.md).
+- Polices : Sora (titres, boutons) et Inter (texte), chargées via Google Fonts.
 - Images : WebP uniquement, max 1600px de large, toujours avec `width`/`height` et `loading="lazy"` (sauf le visuel hero).
 - Pas d'emoji, pas de tirets cadratins dans la copy.
 - Animations en `transform`/`opacity` uniquement, désactivées par `prefers-reduced-motion`.

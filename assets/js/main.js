@@ -70,6 +70,23 @@
     counters.forEach(animateCount);
   }
 
+  // Barre de progression de lecture (transform uniquement)
+  var progress = document.getElementById("scroll-progress");
+  if (progress) {
+    var ticking = false;
+    function updateProgress() {
+      var h = document.documentElement;
+      var max = h.scrollHeight - h.clientHeight;
+      var ratio = max > 0 ? Math.min(h.scrollTop / max, 1) : 0;
+      progress.style.transform = "scaleX(" + ratio + ")";
+      ticking = false;
+    }
+    window.addEventListener("scroll", function () {
+      if (!ticking) { requestAnimationFrame(updateProgress); ticking = true; }
+    }, { passive: true });
+    updateProgress();
+  }
+
   // Sticky CTA mobile : visible après le hero, masqué sur la section réservation
   var sticky = document.getElementById("sticky-cta");
   var hero = document.querySelector(".hero");

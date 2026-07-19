@@ -18,7 +18,7 @@
   --s1: 8px; --s2: 16px; --s3: 24px; --s4: 32px;
   --s5: 40px; --s6: 48px; --s8: 64px; --s10: 80px; --s12: 96px;
   --r-sm: 10px; --r-md: 16px; --r-lg: 24px;
-  --font-display: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Sora", system-ui, -apple-system, "Segoe UI", sans-serif;
   --font-body: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
   --maxw: 1120px;
 }
@@ -42,7 +42,7 @@ a { color: inherit; }
 ::selection { background: var(--accent); color: #fff; }
 
 /* ============ TYPO ============ */
-h1 { font-size: clamp(36px, 6.5vw, 72px); line-height: 1.04; font-weight: 800; letter-spacing: -0.03em; }
+h1 { font-size: clamp(34px, 5.6vw, 62px); line-height: 1.06; font-weight: 800; letter-spacing: -0.03em; }
 h2 { font-size: clamp(26px, 4vw, 42px); line-height: 1.14; font-weight: 700; letter-spacing: -0.02em; }
 h1, h2 {
   background: linear-gradient(180deg, #ffffff 35%, #cabdf5);
@@ -50,40 +50,30 @@ h1, h2 {
   background-clip: text;
   color: transparent;
 }
-h3 { font-size: 19px; font-weight: 700; }
-h1, h2, h3, .brand, .kicker, .phase-tag, .tl-badge { font-family: var(--font-display); }
-.kicker {
-  display: inline-block;
-  font-size: 12px;
-  font-weight: 600;
-  letter-spacing: 0.22em;
-  text-transform: uppercase;
-  color: var(--accent);
-  margin-bottom: var(--s2);
-}
-.lead { color: var(--muted); font-size: clamp(16px, 2vw, 19px); max-width: 640px; }
-.lead strong { color: var(--fg); font-weight: 700; }
+h3 { font-size: 19px; font-weight: 700; letter-spacing: -0.01em; }
+h1, h2, h3, .brand, .eyebrow, .phase-tag, .tl-badge { font-family: var(--font-display); }
 
-/* Numérotation des sections (repère de progression) */
-.section-num {
+/* Eyebrow unifié (hero + sections) — repère de progression cohérent */
+.eyebrow {
   display: inline-flex; align-items: center; gap: 10px;
-  font-family: var(--font-display);
-  font-size: 12px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase;
+  font-size: 12px; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase;
   color: var(--accent-2);
   margin-bottom: var(--s2);
 }
-.section-num::before {
-  content: ""; width: 24px; height: 1px; background: var(--accent-border);
+.eyebrow::before {
+  content: ""; width: 22px; height: 1px; background: var(--accent-border); flex: none;
 }
-.section-num-center { justify-content: center; }
-.section-num-center::before { display: none; }
+.eyebrow-center { justify-content: center; }
+.eyebrow-center::before { display: none; }
+.lead { color: var(--muted); font-size: clamp(16px, 2vw, 18px); max-width: 620px; }
+.lead strong { color: var(--fg); font-weight: 700; }
 
 /* ============ LAYOUT ============ */
 .container { max-width: var(--maxw); margin: 0 auto; padding: 0 var(--s3); }
-section { padding: var(--s8) 0; }
-@media (min-width: 768px) { section { padding: var(--s10) 0; } }
-.section-head { max-width: 680px; margin-bottom: var(--s5); }
-.section-head .lead { margin-top: var(--s2); }
+section { padding: var(--s6) 0; }
+@media (min-width: 768px) { section { padding: var(--s8) 0; } }
+.section-head { max-width: 660px; margin-bottom: var(--s4); }
+.section-head .lead { margin-top: 10px; }
 
 /* ============ HEADER ============ */
 .site-header {
@@ -112,6 +102,25 @@ section { padding: var(--s8) 0; }
 }
 .header-nav a:hover { color: var(--fg); background: var(--glass-strong); }
 @media (min-width: 900px) { .header-nav { display: flex; } }
+.header-actions { display: flex; align-items: center; gap: var(--s2); }
+.header-meta {
+  display: none;
+  font-family: var(--font-display); font-size: 12px; font-weight: 700;
+  letter-spacing: 0.02em; color: var(--muted);
+  padding: 7px 13px; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--glass);
+  white-space: nowrap;
+}
+@media (min-width: 700px) { .header-meta { display: inline-block; } }
+
+/* Barre de progression de lecture */
+.scroll-progress { position: absolute; left: 0; right: 0; bottom: -1px; height: 2px; background: transparent; }
+.scroll-progress span {
+  display: block; height: 100%; width: 100%;
+  transform: scaleX(0); transform-origin: 0 50%;
+  background: linear-gradient(90deg, var(--accent), var(--accent-2));
+  will-change: transform;
+}
 
 /* ============ BUTTONS ============ */
 .btn {
@@ -138,7 +147,7 @@ section { padding: var(--s8) 0; }
 .btn-ghost:hover { background: var(--glass-strong); }
 
 /* ============ HERO ============ */
-.hero { position: relative; padding: var(--s8) 0 var(--s6); overflow: hidden; }
+.hero { position: relative; padding: var(--s6) 0 var(--s5); overflow: hidden; }
 .hero::before {
   content: ""; position: absolute; inset: -40% -20% auto;
   height: 130%;
@@ -569,14 +578,17 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
 .footer-cta-action { display: flex; flex-direction: column; gap: var(--s1); align-items: flex-start; }
 @media (min-width: 768px) { .footer-cta-action { align-items: flex-end; } }
 
-/* ============ HERO TRUST ============ */
-.hero-trust {
+/* ============ HERO META (produit en bref) ============ */
+.hero-meta {
   list-style: none;
-  display: flex; flex-wrap: wrap; gap: var(--s2);
-  margin-top: var(--s2); padding: 0;
+  display: flex; flex-wrap: wrap; gap: var(--s1);
+  margin-top: var(--s4); padding: 0;
 }
-.hero-trust li {
-  font-size: 13px; color: var(--muted); font-weight: 500;
-  display: inline-flex; align-items: center; gap: 6px;
+.hero-meta li {
+  font-family: var(--font-display);
+  font-size: 12.5px; color: var(--muted); font-weight: 600;
+  display: inline-flex; align-items: center; gap: 7px;
+  padding: 6px 13px; border-radius: 999px;
+  border: 1px solid var(--border); background: var(--glass);
 }
-.hero-trust li::before { content: "\2713"; color: var(--green); font-weight: 700; }
+.hero-meta li::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: var(--accent-2); }
