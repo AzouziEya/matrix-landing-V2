@@ -5,6 +5,9 @@ Toutes les évolutions notables de la landing Matrix™.
 ## [Non publié]
 
 ### Modifié
+- **Hero** : accroche avec le chiffre `+64 RDV qualifiés` dans le titre, lead et sous-promesse resserrés.
+- **CTA header** : libellé court (« Éligibilité ») en mobile, complet (« Vérifier mon éligibilité ») à partir de 560px.
+- **Copy** : leads des sections raccourcis (clair, concis, précis) pour ne pas perdre le visiteur.
 - **Navbar** : ajout d'un chip produit (« 45 jours · 2 400 € »), navigation recentrée sur le parcours (Le système / Résultats / Déroulé / FAQ) et barre de progression de lecture.
 - **Typographie** : passage de Montserrat à **Sora** pour les titres (Inter conservé en texte).
 - **Copywriting** : réécriture complète, plus court et plus percutant. Compréhension immédiate en haut de page (cible, bénéfice, solution, produit).

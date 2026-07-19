@@ -140,6 +140,10 @@ section { padding: var(--s6) 0; }
 .btn-primary:active { transform: translateY(0); }
 .btn-lg { padding: 18px 34px; font-size: 16.5px; }
 .btn-sm { padding: 10px 18px; font-size: 14px; }
+/* Libellé de bouton court en mobile, long à partir de 560px */
+.btn .lbl-long { display: none; }
+.btn .lbl-short { display: inline; }
+@media (min-width: 560px) { .btn .lbl-long { display: inline; } .btn .lbl-short { display: none; } }
 .btn-ghost {
   background: var(--glass); color: var(--fg);
   border: 1px solid var(--border);
