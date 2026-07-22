@@ -97,4 +97,26 @@
     new IntersectionObserver(function (e) { pastHero = !e[0].isIntersecting; refresh(); }, { threshold: 0 }).observe(hero);
     new IntersectionObserver(function (e) { onBooking = e[0].isIntersecting; refresh(); }, { threshold: 0 }).observe(booking);
   }
+
+  // Menu mobile
+  var navToggle = document.getElementById("nav-toggle");
+  var mobileNav = document.getElementById("mobile-nav");
+  if (navToggle && mobileNav) {
+    function closeNav() {
+      mobileNav.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Ouvrir le menu");
+    }
+    navToggle.addEventListener("click", function () {
+      var open = mobileNav.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      navToggle.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
+    });
+    mobileNav.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", closeNav);
+    });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 900) closeNav();
+    });
+  }
 })();

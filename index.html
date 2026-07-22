@@ -73,10 +73,20 @@
       </nav>
       <div class="header-actions">
         <span class="header-meta" aria-label="Format du programme">45 jours · 2 400 €</span>
-        <a class="btn btn-primary btn-sm" href="#reserver"><span class="lbl-long">Vérifier mon éligibilité</span><span class="lbl-short">Éligibilité</span></a>
+        <a class="btn btn-primary btn-sm header-cta" href="#reserver">Voir mon éligibilité</a>
+        <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-nav">
+          <span></span><span></span><span></span>
+        </button>
       </div>
     </div>
     <div class="scroll-progress"><span id="scroll-progress"></span></div>
+    <nav class="mobile-nav" id="mobile-nav" aria-label="Navigation mobile">
+      <a href="#systeme">Le système</a>
+      <a href="#preuves">Résultats</a>
+      <a href="#timeline">Déroulé</a>
+      <a href="#faq">FAQ</a>
+      <a class="btn btn-primary" href="#reserver">Voir si mon activité est éligible</a>
+    </nav>
   </header>
 
   <main id="main">
@@ -201,22 +211,6 @@
             <h3>On transforme les échanges en RDV</h3>
             <p>Suivi et relances qui ne laissent aucune opportunité s'éteindre.</p>
           </article>
-        </div>
-      </div>
-    </section>
-
-    <!-- CTA BAND -->
-    <section class="cta-band-wrap" aria-label="Passer à l'action">
-      <div class="container">
-        <div class="cta-band reveal">
-          <div>
-            <p class="cta-band-title">Ce système peut-il marcher pour toi ?</p>
-            <p class="cta-band-sub">On le vérifie ensemble en 30 minutes.</p>
-          </div>
-          <div class="cta-band-action">
-            <a class="btn btn-primary btn-lg" href="#reserver">Voir si mon activité est éligible</a>
-            <p class="cta-reassure">Gratuit · Places limitées chaque mois</p>
-          </div>
         </div>
       </div>
     </section>
@@ -387,7 +381,7 @@
         <div class="faq reveal">
           <details>
             <summary>2 400 €, comment je le rentabilise ?</summary>
-            <p class="faq-a">Avec ton panier moyen, une à deux signatures couvrent le programme pour la plupart de nos clients B2B. L'appel sert à vérifier ensemble que l'équation est rentable pour toi.</p>
+            <p class="faq-a">Une à deux signatures couvrent le programme pour la plupart de nos clients B2B. On vérifie ensemble que l'équation est rentable pour toi.</p>
           </details>
           <details>
             <summary>Je n'ai pas le temps de publier tous les jours.</summary>
@@ -395,7 +389,7 @@
           </details>
           <details>
             <summary>Mon secteur est différent, ça ne marchera pas.</summary>
-            <p class="faq-a">On l'a installé dans 20+ activités B2B : consulting, patrimoine, immobilier, web, coaching. Ce qui compte, ce n'est pas ton secteur mais une offre validée et un client avec du budget. L'appel confirme que c'est ton cas.</p>
+            <p class="faq-a">Consulting, patrimoine, immobilier, web, coaching : 20+ activités B2B différentes. Ce qui compte, ce n'est pas ton secteur, mais une offre validée et un client avec du budget.</p>
           </details>
           <details>
             <summary>J'ai déjà essayé LinkedIn, ça n'a rien donné.</summary>
@@ -409,19 +403,35 @@
       </div>
     </section>
 
-    <!-- 08 · CTA FINAL -->
+    <!-- 08 · RÉSERVATION -->
     <section id="reserver" aria-label="Réserver un appel">
       <div class="container">
-        <div class="cta-final reveal">
+        <div class="section-head section-head-center reveal">
           <span class="eyebrow eyebrow-center">08 · Prochaine étape</span>
-          <h2>Vois si ton activité est éligible.</h2>
-          <p class="lead">30 minutes pour vérifier si Matrix™ peut t'amener tes prochains clients. Si ce n'est pas un bon fit, on te le dit.</p>
-          <a class="btn btn-primary btn-lg" href="https://app.iclosed.io/e/matrix/matrix" rel="noopener">Voir si mon activité est éligible</a>
-          <p class="cta-reassure">30 min · Gratuit · Sans engagement</p>
-          <p class="scarcity"><span class="scarcity-dot" aria-hidden="true"></span>Nombre de clients limité chaque mois pour garantir la qualité du suivi.</p>
+          <h2>Réserve ton appel stratégique.</h2>
+          <p class="lead">30 minutes pour voir si ton activité est éligible. Si ce n'est pas un bon fit, on te le dit.</p>
         </div>
-        <div class="booking-embed">
-          <iframe src="https://app.iclosed.io/e/matrix/matrix" loading="lazy" title="Réserver un appel stratégique Matrix™"></iframe>
+        <div class="booking-widget reveal">
+          <aside class="booking-aside">
+            <span class="booking-badge">Diagnostic gratuit · 30 min</span>
+            <p class="booking-aside-title">Au programme de l'appel</p>
+            <ul class="booking-points">
+              <li>On analyse ton acquisition actuelle</li>
+              <li>On vérifie si Matrix™ colle à ton activité</li>
+              <li>Tu repars avec un plan clair, fit ou non</li>
+            </ul>
+            <ul class="booking-reassure">
+              <li>Sans engagement</li>
+              <li>Places limitées chaque mois</li>
+            </ul>
+          </aside>
+          <div class="booking-frame">
+            <div class="booking-frame-bar" aria-hidden="true">
+              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
+              <span class="booking-frame-label">Choisis ton créneau</span>
+            </div>
+            <iframe src="https://app.iclosed.io/e/matrix/matrix" loading="lazy" title="Réserver un appel stratégique Matrix™"></iframe>
+          </div>
         </div>
       </div>
     </section>
