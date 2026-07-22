@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Matrix™ | +64 RDV qualifiés en 1 mois via LinkedIn</title>
-  <meta name="description" content="Matrix™ : le système d'acquisition LinkedIn pour freelances, agences et consultants B2B. 45 jours pour structurer ton acquisition et booker des RDV qualifiés.">
+  <meta name="description" content="Matrix™ : le système d'acquisition LinkedIn pour freelances, agences et consultants B2B. 45 jours pour transformer ton expertise en RDV qualifiés, sans dépendre du bouche-à-oreille.">
   <meta name="robots" content="index, follow">
   <meta name="theme-color" content="#0a0714">
   <link rel="canonical" href="https://matrix-tm.vercel.app/">
@@ -13,9 +13,9 @@
   <link rel="apple-touch-icon" href="/assets/img/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
-  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"></noscript>
+  <link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap" media="print" onload="this.media='all'">
+  <noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Sora:wght@600;700;800&family=Inter:wght@400;500;600;700&display=swap"></noscript>
   <link rel="preconnect" href="https://app.iclosed.io" crossorigin>
   <link rel="preload" as="image" href="/assets/img/riseup.webp" fetchpriority="high">
   <!-- Open Graph -->
@@ -66,13 +66,17 @@
         Matrix<span>™</span>
       </a>
       <nav class="header-nav" aria-label="Navigation principale">
-        <a href="#methode">Méthode</a>
+        <a href="#systeme">Le système</a>
         <a href="#preuves">Résultats</a>
-        <a href="#timeline">45 jours</a>
+        <a href="#timeline">Déroulé</a>
         <a href="#faq">FAQ</a>
       </nav>
-      <a class="btn btn-primary btn-sm" href="#reserver">Tester mon éligibilité</a>
+      <div class="header-actions">
+        <span class="header-meta" aria-label="Format du programme">45 jours · 2 400 €</span>
+        <a class="btn btn-primary btn-sm" href="#reserver"><span class="lbl-long">Vérifier mon éligibilité</span><span class="lbl-short">Éligibilité</span></a>
+      </div>
     </div>
+    <div class="scroll-progress"><span id="scroll-progress"></span></div>
   </header>
 
   <main id="main">
@@ -81,132 +85,160 @@
     <section class="hero" aria-label="Présentation">
       <div class="container">
         <div class="hero-grid">
-          <div>
-            <span class="kicker">Freelances, agences et consultants B2B</span>
-            <h1>Ton expertise B2B, convertie en RDV qualifiés. <em>Jusqu'à +64 en un mois.</em></h1>
-            <p class="lead">Consulting, patrimoine, immobilier, agences : la méthode s'adapte à ton métier, pas l'inverse. +20 activités B2B accompagnées, +400 000 € générés pour nos clients.</p>
+          <div class="hero-copy">
+            <span class="eyebrow">Freelances · Agences · Consultants B2B</span>
+            <h1>Le système qui a booké <em>+64 RDV qualifiés</em> en un mois.</h1>
+            <p class="lead">Matrix™ installe avec toi ton acquisition LinkedIn complète, en 45 jours.</p>
+            <p class="sub-promise">Déjà installé dans <em>20+ activités B2B</em>. Il s'adapte à ton offre, pas l'inverse.</p>
             <div class="hero-cta-row">
-              <a class="btn btn-primary" href="#reserver">Voir si mon activité est éligible</a>
+              <a class="btn btn-primary btn-lg" href="#reserver">Voir si mon activité est éligible</a>
+              <p class="cta-reassure">30 min · Gratuit · Sans engagement</p>
             </div>
-            <p class="hero-note">Diagnostic gratuit de 30 min. Sans engagement. Accompagnement : 45 jours, 2 400 €.</p>
+            <ul class="hero-meta" aria-label="Le programme en bref">
+              <li>Programme 45 jours</li>
+              <li>100 % accompagné</li>
+              <li>Le système te reste</li>
+            </ul>
           </div>
           <div class="hero-visual reveal">
+            <span class="hero-visual-badge">Cas client · 64 RDV en 30 jours</span>
             <img src="/assets/img/riseup.webp" alt="Tableau de bord : 64 rendez-vous créés sur un mois" width="932" height="644" fetchpriority="high" decoding="async">
           </div>
         </div>
 
         <div class="kpi-bar reveal" aria-label="Chiffres clés">
-          <div class="kpi"><strong><span class="plus">+</span><span class="count" data-target="3">0</span> ans</strong><span>d'expertise B2B</span></div>
+          <div class="kpi"><strong><span class="plus">+</span><span class="count" data-target="3">0</span> ans</strong><span>d'expertise en acquisition B2B</span></div>
           <div class="kpi"><strong><span class="plus">+</span><span class="count" data-target="400000" data-format="k">0</span> €</strong><span>générés pour nos clients</span></div>
           <div class="kpi"><strong><span class="plus">+</span><span class="count" data-target="64">0</span></strong><span>RDV qualifiés en 1 mois</span></div>
-          <div class="kpi"><strong><span class="plus">+</span><span class="count" data-target="20">0</span></strong><span>clients accompagnés</span></div>
+          <div class="kpi"><strong><span class="plus">+</span><span class="count" data-target="20">0</span></strong><span>clients B2B accompagnés</span></div>
         </div>
-        <p class="hero-scroll reveal">&darr; 2 minutes pour comprendre le système</p>
+
+        <a class="scroll-hint" href="#probleme" aria-label="Faire défiler vers le problème">
+          <span>Le vrai problème, en 5 secondes</span>
+          <span class="scroll-hint-arrow" aria-hidden="true"></span>
+        </a>
       </div>
     </section>
 
-    <!-- DOULEUR -->
-    <section aria-label="Le problème">
+    <!-- 01 · DOULEUR -->
+    <section id="probleme" aria-label="Le problème">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">01 · Le constat</span>
-          <h2>Ton offre est bonne. Ton acquisition ne suit pas.</h2>
-          <p class="lead">Ce n'est pas un problème de compétence. C'est un problème de système. Et un système, ça s'installe.</p>
+          <span class="eyebrow">01 · Le vrai problème</span>
+          <h2>Ton offre est solide. Ton acquisition ne suit pas.</h2>
+          <p class="lead">Pas un problème de compétence. Un problème de système. Ça, ça s'installe.</p>
         </div>
         <div class="pain-grid">
           <article class="card reveal">
             <span class="pain-num">01</span>
-            <h3>Le 25 du mois, ton agenda est vide</h3>
-            <p>Sans flux régulier de RDV, ton chiffre dépend des recommandations. Elles arrivent quand elles veulent.</p>
+            <h3>Le 25 du mois, agenda vide</h3>
+            <p>Ton chiffre dépend des recommandations. Elles arrivent quand elles veulent.</p>
           </article>
           <article class="card reveal">
             <span class="pain-num">02</span>
-            <h3>Tu publies, il ne se passe rien</h3>
-            <p>Des vues, des likes, mais pas de conversations commerciales. LinkedIn fonctionne, à condition d'avoir un système derrière.</p>
+            <h3>Tu publies, rien ne bouge</h3>
+            <p>Des vues, des likes, mais zéro conversation commerciale.</p>
           </article>
           <article class="card reveal">
             <span class="pain-num">03</span>
             <h3>Tu prospectes à l'instinct</h3>
-            <p>Des messages improvisés, des relances oubliées. Chaque mois repart de zéro, alors qu'un process ferait ce travail pour toi.</p>
+            <p>Messages improvisés, relances oubliées. Chaque mois repart de zéro.</p>
           </article>
         </div>
-        <p class="pain-bridge reveal">Tu t'es reconnu ? Bonne nouvelle : ces trois situations ont la même cause, et la même solution.</p>
+        <p class="section-bridge reveal">Tu t'es reconnu ? Regarde d'abord ce qui entretient le problème.</p>
       </div>
     </section>
 
-    <!-- CE QUI PLAFONNE -->
-    <section aria-label="Ce qui ne suffit plus">
+    <!-- 02 · CE QUI NE MARCHE PLUS -->
+    <section id="ancien-monde" aria-label="Ce qui ne marche plus">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">02 · Ce qui plafonne</span>
-          <h2>Ce que tu fais déjà, et pourquoi ça ne suffit plus.</h2>
+          <span class="eyebrow">02 · Ce qui ne marche plus</span>
+          <h2>Trois réflexes qui te coûtent des clients.</h2>
         </div>
-        <div class="pain-grid">
-          <article class="card reveal">
-            <span class="pain-num">A</span>
-            <h3>Publier en espérant</h3>
-            <p>Un post qui performe fait du bien. Mais sans ciblage ni suivi derrière, la visibilité reste de la visibilité : elle ne remplit pas un agenda.</p>
+        <div class="oldway-grid">
+          <article class="card oldway reveal">
+            <span class="oldway-tag">Réflexe 01</span>
+            <h3>Poster au hasard</h3>
+            <p>Sans cible ni angle, tu parles à tout le monde. Donc à personne.</p>
           </article>
-          <article class="card reveal">
-            <span class="pain-num">B</span>
-            <h3>Le bouche-à-oreille seul</h3>
-            <p>Excellent canal, débit imprévisible. Tu ne décides ni du volume, ni du moment, ni du type de client qui arrive.</p>
+          <article class="card oldway reveal">
+            <span class="oldway-tag">Réflexe 02</span>
+            <h3>Attendre le bouche-à-oreille</h3>
+            <p>Ingérable : tu ne décides ni du volume, ni du moment, ni de la qualité.</p>
           </article>
-          <article class="card reveal">
-            <span class="pain-num">C</span>
-            <h3>Les plateformes freelance</h3>
-            <p>Des clients qui comparent d'abord les prix. Ton expertise mérite une conversation, pas un appel d'offres.</p>
+          <article class="card oldway reveal">
+            <span class="oldway-tag">Réflexe 03</span>
+            <h3>Courir les plateformes freelance</h3>
+            <p>La guerre des prix. Tu brades ton temps au lieu de vendre ton expertise.</p>
           </article>
         </div>
-        <p class="section-next reveal">Ce qui manque, ce n'est pas l'effort. C'est le système. Le voici. &darr;</p>
+        <p class="section-bridge reveal">Le point commun : tu subis. Voilà comment reprendre la main.</p>
       </div>
     </section>
 
-    <!-- 3 PHASES -->
-    <section id="methode" aria-label="La méthode Matrix">
+    <!-- 03 · LE SYSTÈME (3 PHASES) -->
+    <section id="systeme" aria-label="Le système Matrix">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">03 · Le système M.S.S.</span>
-          <h2>Trois phases. Un seul objectif : des RDV qualifiés.</h2>
-          <p class="lead">Éprouvée sur plus de 20 accompagnements B2B, du freelance indépendant à l'agence structurée.</p>
+          <span class="eyebrow">03 · Le système Matrix™</span>
+          <h2>Trois phases. Un objectif : des RDV qualifiés.</h2>
+          <p class="lead">Le système que tu gardes. Éprouvé sur 20+ accompagnements B2B.</p>
         </div>
         <div class="phase-grid">
           <article class="card reveal">
-            <div class="phase-letter" aria-hidden="true">M</div>
-            <span class="phase-tag">Phase 1 · Matrix™</span>
-            <h3>Modéliser</h3>
-            <p>On identifie ta zone de cash rapide : l'offre, la cible et l'angle les plus rentables pour les 45 prochains jours.</p>
+            <div class="phase-letter" aria-hidden="true">1</div>
+            <span class="phase-tag">Phase 1 · Lancement</span>
+            <h3>On cible ta zone de cash</h3>
+            <p>Offre, cible et angle les plus rentables pour les 45 prochains jours.</p>
           </article>
           <article class="card reveal">
-            <div class="phase-letter" aria-hidden="true">S</div>
-            <span class="phase-tag">Phase 2 · Speed™</span>
-            <h3>Structurer</h3>
-            <p>On installe ta machine LinkedIn : profil, contenu et prospection cadencée qui génèrent des conversations chaque semaine.</p>
+            <div class="phase-letter" aria-hidden="true">2</div>
+            <span class="phase-tag">Phase 2 · Speed</span>
+            <h3>On installe ta machine LinkedIn</h3>
+            <p>Profil, contenu, prospection cadencée. Des conversations chaque semaine.</p>
           </article>
           <article class="card reveal">
-            <div class="phase-letter" aria-hidden="true">S</div>
-            <span class="phase-tag">Phase 3 · Search™</span>
-            <h3>Scaler</h3>
-            <p>On convertit les leads chauds et dormants en clients avec des campagnes de nurturing activées en parallèle.</p>
+            <div class="phase-letter" aria-hidden="true">3</div>
+            <span class="phase-tag">Phase 3 · Search</span>
+            <h3>On transforme les échanges en RDV</h3>
+            <p>Suivi et relances qui ne laissent aucune opportunité s'éteindre.</p>
           </article>
         </div>
-        <p class="section-next reveal">Un système ne vaut que par ses résultats. Regarde. &darr;</p>
+        <p class="section-bridge reveal">Un système se juge à ses résultats. Les voici.</p>
       </div>
     </section>
 
-    <!-- PREUVES -->
+    <!-- CTA BAND -->
+    <section class="cta-band-wrap" aria-label="Passer à l'action">
+      <div class="container">
+        <div class="cta-band reveal">
+          <div>
+            <p class="cta-band-title">Ce système peut-il marcher pour toi ?</p>
+            <p class="cta-band-sub">On le vérifie en 30 minutes. Si ce n'est pas un bon fit, on te le dit.</p>
+          </div>
+          <div class="cta-band-action">
+            <a class="btn btn-primary btn-lg" href="#reserver">Voir si mon activité est éligible</a>
+            <p class="cta-reassure">Gratuit · Places limitées chaque mois</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 04 · PREUVES -->
     <section id="preuves" aria-label="Résultats clients">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">04 · Les preuves</span>
+          <span class="eyebrow">04 · Les preuves</span>
           <h2>Ils ont installé le système. Voilà ce que ça donne.</h2>
+          <p class="lead">Des cas réels et documentés, sur des activités B2B différentes.</p>
         </div>
         <div class="proof-grid">
           <article class="card proof-card reveal">
             <img src="/assets/img/case-64rdv.webp" alt="Capture : 64 rendez-vous qualifiés bookés en 30 jours" width="1150" height="654" loading="lazy" decoding="async">
             <div class="proof-body">
               <h3>Agence de consulting</h3>
-              <p>64 rendez-vous qualifiés bookés en 30 jours grâce au système Matrix™. Chiffres de septembre 2024.</p>
+              <p>64 rendez-vous qualifiés bookés en 30 jours. Chiffres de septembre 2024.</p>
               <div class="proof-metrics">
                 <div><strong>+64</strong><span>RDV / mois</span></div>
               </div>
@@ -216,7 +248,7 @@
             <img src="/assets/img/case-serkan.webp" alt="Capture : 376 460 impressions LinkedIn en 365 jours" width="1150" height="640" loading="lazy" decoding="async">
             <div class="proof-body">
               <h3>Conseiller en gestion de patrimoine</h3>
-              <p>376 460 impressions en 365 jours et une audience qui devient une source régulière de conversations.</p>
+              <p>376 460 impressions en 365 jours. Une audience qui devient une source de conversations.</p>
               <div class="proof-metrics">
                 <div><strong>+3 135</strong><span>abonnés</span></div>
                 <div><strong>+15,1 %</strong><span>croissance</span></div>
@@ -227,7 +259,7 @@
             <img src="/assets/img/case-thibault.webp" alt="Capture : 10 RDV qualifiés, 3 clients signés" width="1150" height="650" loading="lazy" decoding="async">
             <div class="proof-body">
               <h3>Immobilier &amp; investissement</h3>
-              <p>Objectif atteint : toucher des fondateurs d'agences finance et immobilier, et créer un levier commercial fiable.</p>
+              <p>Toucher des fondateurs d'agences finance et immobilier, et créer un levier commercial fiable.</p>
               <div class="proof-metrics">
                 <div><strong>10</strong><span>RDV qualifiés</span></div>
                 <div><strong>3</strong><span>clients signés</span></div>
@@ -238,7 +270,7 @@
             <img src="/assets/img/case-coaching-setting.webp" alt="Capture : premier rendez-vous ciblé après la première session" width="1150" height="642" loading="lazy" decoding="async">
             <div class="proof-body">
               <h3>Agence web / UX</h3>
-              <p>Un rendez-vous ciblé dès la première session, réponse en moins de 24 h et une première signature de coaching.</p>
+              <p>Un RDV ciblé dès la première session, et une première signature de coaching.</p>
               <div class="proof-metrics">
                 <div><strong>1</strong><span>RDV qualifié</span></div>
                 <div><strong>&lt; 24 h</strong><span>de réponse</span></div>
@@ -247,55 +279,48 @@
           </article>
         </div>
         <p class="proof-disclaimer">Résultats individuels obtenus par des clients Matrix™ sur les périodes indiquées. Non représentatifs d'une moyenne. <a href="/legal/avertissement-resultats">Avertissement complet sur les résultats</a>.</p>
-        <div class="cta-inline reveal">
-          <a class="btn btn-primary" href="#reserver">Voir si mon activité est éligible</a>
-          <p class="micro-note">Diagnostic gratuit de 30 min. Sans engagement.</p>
-        </div>
-        <p class="section-next reveal">Ces résultats viennent de métiers différents. Vérifie que le tien est compatible. &darr;</p>
+        <p class="section-bridge reveal">Ces résultats ne tombent pas sur tout le monde. Vois si ton profil colle.</p>
       </div>
     </section>
 
-    <!-- ICP -->
-    <section aria-label="Pour qui">
+    <!-- 05 · ICP -->
+    <section id="pour-qui" aria-label="Pour qui">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">05 · Pour qui</span>
+          <span class="eyebrow">05 · Pour qui, pas pour qui</span>
           <h2>On travaille avec ceux qu'on peut vraiment aider.</h2>
         </div>
         <div class="icp-grid">
           <div class="card icp-col icp-yes reveal">
             <h3><span class="icp-dot" aria-hidden="true"></span>C'est pour toi si</h3>
             <ul>
-              <li>Tu es freelance, agence ou consultant B2B avec une offre déjà validée par des clients.</li>
-              <li>Tes clients ont un panier moyen suffisant pour rentabiliser 2 à 3 signatures.</li>
-              <li>Tu peux consacrer quelques heures par semaine à ton acquisition pendant 45 jours.</li>
-              <li>Tu veux un système que tu gardes, pas une prestation qui s'arrête quand on part.</li>
+              <li>Tu es freelance, agence ou consultant B2B avec une offre déjà validée.</li>
+              <li>Ton panier moyen rentabilise 2 à 3 signatures.</li>
+              <li>Tu peux consacrer quelques heures par semaine pendant 45 jours.</li>
+              <li>Tu veux un système que tu gardes, pas une prestation qui s'arrête.</li>
             </ul>
           </div>
           <div class="card icp-col icp-no reveal">
             <h3><span class="icp-dot" aria-hidden="true"></span>Ce n'est pas pour toi si</h3>
             <ul>
-              <li>Tu n'as pas encore d'offre ni de premier client : Matrix™ accélère, il ne crée pas ton métier.</li>
-              <li>Tu veux tout déléguer sans t'impliquer : le système se construit avec toi, pas sans toi.</li>
+              <li>Tu n'as pas encore d'offre ni de premier client.</li>
+              <li>Tu veux tout déléguer sans t'impliquer.</li>
               <li>Tu vends uniquement en B2C.</li>
-              <li>Tu attends une promesse de gains garantis. Personne de sérieux ne peut te promettre ça.</li>
+              <li>Tu attends des gains garantis. Personne de sérieux ne promet ça.</li>
             </ul>
           </div>
         </div>
-        <div class="cta-inline reveal">
-          <a class="btn btn-primary" href="#reserver">Voir si mon activité est éligible</a>
-          <p class="micro-note">La réponse en 30 min, gratuitement.</p>
-        </div>
-        <p class="section-next reveal">Tu coches les cases ? Voilà comment se déroulent tes 45 jours. &darr;</p>
+        <p class="section-bridge reveal">Tu te reconnais à gauche ? Voilà à quoi ressemblent tes 45 jours.</p>
       </div>
     </section>
 
-    <!-- TIMELINE 45J -->
+    <!-- 06 · TIMELINE 45J -->
     <section id="timeline" aria-label="Déroulé des 45 jours">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">06 · Les 45 jours</span>
+          <span class="eyebrow">06 · Tes 45 jours</span>
           <h2>45 jours. Trois phases. Zéro improvisation.</h2>
+          <p class="lead">Tu sais dès le premier jour ce qui se passe, et quand.</p>
         </div>
         <ol class="timeline">
           <li class="tl-item reveal">
@@ -303,18 +328,17 @@
             <div class="card">
               <div class="tl-head">
                 <div>
-                  <span class="phase-tag">Phase 1</span>
+                  <span class="phase-tag">Phase 1 · Lancement</span>
                   <h3>Diagnostic &amp; positionnement</h3>
                 </div>
                 <span class="tl-badge">J1 → J5</span>
               </div>
-              <p class="tl-obj">Objectif : comprendre ton activité et définir une stratégie d'acquisition LinkedIn adaptée.</p>
+              <p class="tl-obj">Objectif : définir une stratégie d'acquisition LinkedIn adaptée à ton activité.</p>
               <ul class="tl-list">
-                <li>Analyse de ton offre, ton marché et ton positionnement</li>
+                <li>Analyse de ton offre, ton marché, ton positionnement</li>
                 <li>Définition de ton client idéal (ICP)</li>
                 <li>Clarification de ton angle de communication</li>
                 <li>Structuration du discours commercial LinkedIn</li>
-                <li>Préparation de la stratégie avant lancement</li>
               </ul>
             </div>
           </li>
@@ -323,18 +347,17 @@
             <div class="card">
               <div class="tl-head">
                 <div>
-                  <span class="phase-tag">Phase 2</span>
+                  <span class="phase-tag">Phase 2 · Speed</span>
                   <h3>Configuration &amp; lancement</h3>
                 </div>
                 <span class="tl-badge">J5 → J7</span>
               </div>
-              <p class="tl-obj">Objectif : mettre en place ton système de prospection LinkedIn et lancer les premières campagnes.</p>
+              <p class="tl-obj">Objectif : mettre en place ta prospection et lancer les premières campagnes.</p>
               <ul class="tl-list">
                 <li>Configuration de l'environnement de prospection</li>
                 <li>Création du ciblage prospects</li>
                 <li>Préparation des séquences de messages</li>
-                <li>Paramétrage du setting conversationnel</li>
-                <li>Tests finaux et lancement des campagnes LinkedIn</li>
+                <li>Tests finaux et lancement des campagnes</li>
               </ul>
             </div>
           </li>
@@ -343,69 +366,69 @@
             <div class="card">
               <div class="tl-head">
                 <div>
-                  <span class="phase-tag">Phase 3</span>
+                  <span class="phase-tag">Phase 3 · Search</span>
                   <h3>Exploitation &amp; optimisation</h3>
                 </div>
                 <span class="tl-badge">J7 → J45</span>
               </div>
-              <p class="tl-obj">Objectif : transformer LinkedIn en un canal d'acquisition régulier avec des conversations qualifiées.</p>
+              <p class="tl-obj">Objectif : faire de LinkedIn un canal d'acquisition régulier et qualifié.</p>
               <ul class="tl-list">
-                <li>Gestion des conversations avec les prospects dès les premières réponses</li>
-                <li>Qualification des opportunités</li>
-                <li>Booking des rendez-vous qualifiés</li>
+                <li>Gestion des conversations dès les premières réponses</li>
+                <li>Qualification des opportunités et booking des RDV</li>
                 <li>Optimisation continue des campagnes</li>
-                <li>Analyse des performances et ajustements stratégiques</li>
-                <li>Suivi régulier des résultats</li>
+                <li>Suivi des résultats et ajustements stratégiques</li>
               </ul>
             </div>
           </li>
         </ol>
-        <p class="timeline-closing reveal">45 jours pour passer d'une prospection LinkedIn non structurée à <em>un système d'acquisition organisé et optimisé</em>.</p>
-        <p class="section-next reveal">Il te reste des questions ? Réponses directes juste en dessous. &darr;</p>
+        <p class="timeline-closing reveal">45 jours pour passer d'une prospection au hasard à <em>un système d'acquisition qui tourne</em>.</p>
+        <p class="section-bridge reveal">Une question te retient ? Elle est sûrement juste en dessous.</p>
       </div>
     </section>
 
-    <!-- FAQ -->
+    <!-- 07 · FAQ -->
     <section id="faq" aria-label="Questions fréquentes">
       <div class="container">
         <div class="section-head reveal">
-          <span class="kicker">07 · Questions fréquentes</span>
-          <h2>Tes dernières questions avant de te lancer.</h2>
+          <span class="eyebrow">07 · Tes objections, réglées</span>
+          <h2>Les 5 questions qu'on nous pose avant de signer.</h2>
         </div>
         <div class="faq reveal">
           <details>
-            <summary>2 400 €, c'est un vrai investissement. Comment je le rentabilise ?</summary>
-            <p class="faq-a">Fais le calcul avec ton panier moyen : pour la plupart de nos clients B2B, une à deux signatures couvrent le programme. Le diagnostic sert exactement à ça : vérifier ensemble que l'équation est rentable pour toi avant d'engager quoi que ce soit.</p>
+            <summary>2 400 €, comment je le rentabilise ?</summary>
+            <p class="faq-a">Avec ton panier moyen, une à deux signatures couvrent le programme pour la plupart de nos clients B2B. L'appel sert à vérifier ensemble que l'équation est rentable pour toi.</p>
           </details>
           <details>
             <summary>Je n'ai pas le temps de publier tous les jours.</summary>
-            <p class="faq-a">Personne ne te le demande. Matrix™ repose sur une cadence réaliste de quelques heures par semaine, structurée pour un indépendant qui a déjà des clients à livrer.</p>
+            <p class="faq-a">Personne ne te le demande. Matrix™ tient sur une cadence réaliste de quelques heures par semaine, pensée pour un indépendant qui a déjà des clients à livrer.</p>
           </details>
           <details>
-            <summary>Mon secteur est différent, ça ne marchera pas pour moi.</summary>
-            <p class="faq-a">C'est la première chose qu'on vérifie au diagnostic. La méthode a été appliquée dans le consulting, la gestion de patrimoine, l'immobilier et les agences web : des cycles de vente et des paniers très différents. Ce qui compte : tu vends à des professionnels, avec un panier qui rentabilise deux à trois signatures. Si ce n'est pas ton cas, on te le dit à l'appel.</p>
+            <summary>Mon secteur est différent, ça ne marchera pas.</summary>
+            <p class="faq-a">On l'a installé dans 20+ activités B2B : consulting, patrimoine, immobilier, web, coaching. Ce qui compte, ce n'est pas ton secteur mais une offre validée et un client avec du budget. L'appel confirme que c'est ton cas.</p>
           </details>
           <details>
             <summary>J'ai déjà essayé LinkedIn, ça n'a rien donné.</summary>
-            <p class="faq-a">Publier sans système, c'est la norme. Et c'est précisément ce qui ne marche pas. La différence ici : une cible définie, un angle précis, une cadence de prospection et un suivi des conversations. Pas des posts isolés.</p>
+            <p class="faq-a">Publier sans système, c'est la norme, et c'est ce qui ne marche pas. Ici : une cible définie, un angle précis, une cadence de prospection et un suivi des conversations. Pas des posts isolés.</p>
           </details>
           <details>
             <summary>Vous garantissez des résultats ?</summary>
-            <p class="faq-a">Non, et méfie-toi de ceux qui le font. On te montre des résultats réels et documentés de clients, on filtre à l'entrée pour ne prendre que des profils où la méthode a du sens, et tout est encadré par nos <a href="/legal/conditions-generales">conditions générales</a>.</p>
+            <p class="faq-a">Non, et méfie-toi de ceux qui le font. On te montre des cas réels et documentés, on filtre à l'entrée, et tout est encadré par nos <a href="/legal/conditions-generales">conditions générales</a>.</p>
           </details>
         </div>
+        <p class="section-bridge reveal">Plus qu'une étape : vérifier que ton activité est éligible.</p>
       </div>
     </section>
 
-    <!-- CTA FINAL -->
+    <!-- 08 · CTA FINAL -->
     <section id="reserver" aria-label="Réserver un appel">
       <div class="container">
         <div class="cta-final reveal">
-          <span class="kicker">08 · Diagnostic</span>
-          <h2>Vérifie si ton activité est éligible.</h2>
-          <p class="lead">30 minutes au téléphone : on analyse ton offre, ton marché et ton acquisition actuelle. Si Matrix™ peut t'amener des clients, on te montre comment. Sinon, on te le dit.</p>
-          <a class="btn btn-primary" href="https://app.iclosed.io/e/matrix/matrix" rel="noopener">Voir si mon activité est éligible</a>
-          <p class="micro-note">Diagnostic gratuit, sans engagement. Le nombre d'accompagnements est limité chaque mois pour garantir un suivi individuel.</p>
+          <span class="eyebrow eyebrow-center">08 · Prochaine étape</span>
+          <h2>Vois si ton activité est éligible.</h2>
+          <p class="lead">30 minutes pour vérifier si Matrix™ peut t'amener tes prochains clients. Si ce n'est pas un bon fit, on te le dit.</p>
+          <a class="btn btn-primary btn-lg" href="https://app.iclosed.io/e/matrix/matrix" rel="noopener">Voir si mon activité est éligible</a>
+          <p class="cta-reassure">30 min · Gratuit · Sans engagement</p>
+          <p class="scarcity"><span class="scarcity-dot" aria-hidden="true"></span>Nombre de clients limité chaque mois pour garantir la qualité du suivi.</p>
         </div>
         <div class="booking-embed">
           <iframe src="https://app.iclosed.io/e/matrix/matrix" loading="lazy" title="Réserver un appel stratégique Matrix™"></iframe>
@@ -414,9 +437,12 @@
     </section>
   </main>
 
-  <!-- STICKY CTA MOBILE -->
+  <!-- STICKY CTA (mobile permanent + desktop après scroll) -->
   <div class="sticky-cta" id="sticky-cta">
-    <a class="btn btn-primary" href="#reserver">Voir si mon activité est éligible</a>
+    <div class="sticky-cta-inner">
+      <p class="sticky-cta-text">Diagnostic gratuit · Places limitées</p>
+      <a class="btn btn-primary" href="#reserver">Voir si mon activité est éligible</a>
+    </div>
   </div>
 
   <!-- COOKIE BANNER -->
@@ -433,7 +459,10 @@
     <div class="container">
       <div class="footer-cta">
         <p>Prêt à structurer ton acquisition ?</p>
-        <a class="btn btn-primary" href="#reserver">Réserver mon appel stratégique</a>
+        <div class="footer-cta-action">
+          <a class="btn btn-primary" href="#reserver">Voir si mon activité est éligible</a>
+          <p class="cta-reassure">Gratuit · Sans engagement</p>
+        </div>
       </div>
       <div class="footer-grid">
         <div>
@@ -452,7 +481,8 @@
         <nav class="footer-col" aria-label="Navigation pied de page">
           <p class="footer-title">Navigation</p>
           <ul>
-            <li><a href="#methode">La méthode M.S.S.</a></li>
+            <li><a href="#probleme">Le problème</a></li>
+            <li><a href="#systeme">Le système</a></li>
             <li><a href="#preuves">Résultats</a></li>
             <li><a href="#timeline">Les 45 jours</a></li>
             <li><a href="#reserver">Réserver un appel</a></li>

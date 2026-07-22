@@ -1,0 +1,21 @@
+# Dépendances / build
+node_modules/
+dist/
+.vercel/
+
+# Logs
+*.log
+npm-debug.log*
+
+# Système
+.DS_Store
+Thumbs.db
+
+# Éditeurs
+.idea/
+.vscode/
+*.swp
+
+# Environnement
+.env
+.env.local
