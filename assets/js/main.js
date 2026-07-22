@@ -98,6 +98,36 @@
     new IntersectionObserver(function (e) { onBooking = e[0].isIntersecting; refresh(); }, { threshold: 0 }).observe(booking);
   }
 
+  // Modale de réservation (ouvre le calendrier iClosed)
+  var modal = document.getElementById("book-modal");
+  if (modal) {
+    var frame = modal.querySelector("iframe");
+    var lastFocus = null;
+    function openModal(e) {
+      if (e) e.preventDefault();
+      lastFocus = document.activeElement;
+      if (frame && !frame.src) frame.src = frame.dataset.src;
+      modal.hidden = false;
+      document.body.classList.add("no-scroll");
+      var closeBtn = document.getElementById("book-modal-close");
+      if (closeBtn) closeBtn.focus();
+    }
+    function closeModal() {
+      modal.hidden = true;
+      document.body.classList.remove("no-scroll");
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+    document.querySelectorAll(".js-book").forEach(function (btn) {
+      btn.addEventListener("click", openModal);
+    });
+    modal.querySelectorAll("[data-book-close], #book-modal-close").forEach(function (el) {
+      el.addEventListener("click", closeModal);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !modal.hidden) closeModal();
+    });
+  }
+
   // Menu mobile
   var navToggle = document.getElementById("nav-toggle");
   var mobileNav = document.getElementById("mobile-nav");

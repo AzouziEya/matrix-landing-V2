@@ -54,7 +54,7 @@
     "sameAs": ["https://www.linkedin.com/in/dpagency-be/"]
   }
   </script>
-  <link rel="stylesheet" href="/assets/css/main.css">
+  <link rel="stylesheet" href="/assets/css/main.css?v=4">
 </head>
 <body>
   <a class="skip-link" href="#main">Aller au contenu</a>
@@ -72,8 +72,7 @@
         <a href="#faq">FAQ</a>
       </nav>
       <div class="header-actions">
-        <span class="header-meta" aria-label="Format du programme">45 jours · 2 400 €</span>
-        <a class="btn btn-primary btn-sm header-cta" href="#reserver">Voir mon éligibilité</a>
+        <a class="btn btn-primary btn-sm header-cta js-book" href="https://app.iclosed.io/e/matrix/matrix" rel="noopener">Voir mon éligibilité</a>
         <button class="nav-toggle" id="nav-toggle" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="mobile-nav">
           <span></span><span></span><span></span>
         </button>
@@ -85,7 +84,7 @@
       <a href="#preuves">Résultats</a>
       <a href="#timeline">Déroulé</a>
       <a href="#faq">FAQ</a>
-      <a class="btn btn-primary" href="#reserver">Voir si mon activité est éligible</a>
+      <a class="btn btn-primary js-book" href="https://app.iclosed.io/e/matrix/matrix" rel="noopener">Voir si mon activité est éligible</a>
     </nav>
   </header>
 
@@ -101,14 +100,9 @@
             <p class="lead">Matrix™ installe avec toi ton acquisition LinkedIn complète, en 45 jours.</p>
             <p class="sub-promise">Quel que soit ton métier B2B, il s'adapte à ton offre. <em>Pas l'inverse.</em></p>
             <div class="hero-cta-row">
-              <a class="btn btn-primary btn-lg" href="#reserver">Voir si mon activité est éligible</a>
+              <a class="btn btn-primary btn-lg js-book" href="https://app.iclosed.io/e/matrix/matrix" rel="noopener">Voir si mon activité est éligible</a>
               <p class="cta-reassure">30 min · Gratuit · Sans engagement</p>
             </div>
-            <ul class="hero-meta" aria-label="Le programme en bref">
-              <li>Programme 45 jours</li>
-              <li>100 % accompagné</li>
-              <li>Le système te reste</li>
-            </ul>
           </div>
           <div class="hero-visual reveal">
             <span class="hero-visual-badge">Cas client · 64 RDV en 30 jours</span>
@@ -408,40 +402,47 @@
       <div class="container">
         <div class="section-head section-head-center reveal">
           <span class="eyebrow eyebrow-center">08 · Prochaine étape</span>
-          <h2>Réserve ton appel stratégique.</h2>
-          <p class="lead">30 minutes pour voir si ton activité est éligible. Si ce n'est pas un bon fit, on te le dit.</p>
+          <h2>Réserve ton appel stratégique</h2>
+          <p class="lead">30 minutes pour voir si ton activité est éligible.</p>
         </div>
-        <div class="booking-widget reveal">
-          <aside class="booking-aside">
-            <span class="booking-badge">Diagnostic gratuit · 30 min</span>
-            <p class="booking-aside-title">Au programme de l'appel</p>
-            <ul class="booking-points">
-              <li>On analyse ton acquisition actuelle</li>
-              <li>On vérifie si Matrix™ colle à ton activité</li>
-              <li>Tu repars avec un plan clair, fit ou non</li>
+        <div class="book-card reveal">
+          <div class="book-card-main">
+            <span class="book-card-badge">Diagnostic gratuit · 30 min</span>
+            <h3 class="book-card-title">On regarde ensemble si Matrix™ colle à ton activité.</h3>
+            <ul class="book-card-points">
+              <li>Analyse de ton acquisition actuelle</li>
+              <li>Vérification de ton éligibilité</li>
+              <li>Un plan clair, fit ou non</li>
             </ul>
-            <ul class="booking-reassure">
-              <li>Sans engagement</li>
-              <li>Places limitées chaque mois</li>
-            </ul>
-          </aside>
-          <div class="booking-frame">
-            <div class="booking-frame-bar" aria-hidden="true">
-              <span class="dot"></span><span class="dot"></span><span class="dot"></span>
-              <span class="booking-frame-label">Choisis ton créneau</span>
-            </div>
-            <iframe src="https://app.iclosed.io/e/matrix/matrix" loading="lazy" title="Réserver un appel stratégique Matrix™"></iframe>
+          </div>
+          <div class="book-card-action">
+            <a class="btn btn-primary btn-lg js-book" href="https://app.iclosed.io/e/matrix/matrix" rel="noopener">Choisir mon créneau</a>
+            <p class="cta-reassure">Sans engagement · Places limitées chaque mois</p>
           </div>
         </div>
       </div>
     </section>
   </main>
 
+  <!-- MODALE DE RÉSERVATION -->
+  <div class="book-modal" id="book-modal" role="dialog" aria-modal="true" aria-label="Réserver un appel stratégique" hidden>
+    <div class="book-modal-backdrop" data-book-close></div>
+    <div class="book-modal-card">
+      <div class="book-modal-head">
+        <span class="book-modal-title">Réserve ton appel stratégique</span>
+        <button class="book-modal-close" id="book-modal-close" aria-label="Fermer">&times;</button>
+      </div>
+      <div class="book-modal-frame">
+        <iframe title="Réserver un appel stratégique Matrix™" data-src="https://app.iclosed.io/e/matrix/matrix"></iframe>
+      </div>
+    </div>
+  </div>
+
   <!-- STICKY CTA (mobile permanent + desktop après scroll) -->
   <div class="sticky-cta" id="sticky-cta">
     <div class="sticky-cta-inner">
       <p class="sticky-cta-text">Diagnostic gratuit · Places limitées</p>
-      <a class="btn btn-primary" href="#reserver">Voir si mon activité est éligible</a>
+      <a class="btn btn-primary js-book" href="https://app.iclosed.io/e/matrix/matrix" rel="noopener">Voir si mon activité est éligible</a>
     </div>
   </div>
 
@@ -510,6 +511,6 @@
     </div>
   </footer>
 
-  <script src="/assets/js/main.js" defer></script>
+  <script src="/assets/js/main.js?v=4" defer></script>
 </body>
 </html>
