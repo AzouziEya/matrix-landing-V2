@@ -216,7 +216,7 @@ section { padding: var(--s8) 0; }
 }
 .sub-promise em { font-style: normal; color: var(--accent-2); font-weight: 700; }
 .hero-cta-row { margin-top: var(--s4); display: flex; flex-direction: column; align-items: flex-start; gap: var(--s2); }
-.cta-reassure { font-size: 13px; color: var(--faint); font-weight: 500; }
+.book-note { font-size: 13px; color: var(--faint); font-weight: 500; }
 .hero-visual {
   position: relative;
   border: 1px solid var(--border);
@@ -238,31 +238,6 @@ section { padding: var(--s8) 0; }
   backdrop-filter: blur(8px); -webkit-backdrop-filter: blur(8px);
 }
 
-/* Scroll hint */
-.scroll-hint {
-  display: inline-flex; align-items: center; gap: 10px;
-  margin-top: var(--s6);
-  color: var(--muted); text-decoration: none;
-  font-size: 13px; font-weight: 500;
-  transition: color 0.2s;
-}
-.scroll-hint:hover { color: var(--fg); }
-.scroll-hint-arrow {
-  width: 22px; height: 22px; border-radius: 50%;
-  border: 1px solid var(--accent-border); position: relative; flex: none;
-}
-.scroll-hint-arrow::after {
-  content: ""; position: absolute; left: 50%; top: 45%;
-  width: 6px; height: 6px;
-  border-right: 1.5px solid var(--accent-2); border-bottom: 1.5px solid var(--accent-2);
-  transform: translate(-50%, -50%) rotate(45deg);
-  animation: scroll-bob 1.6s ease-in-out infinite;
-}
-@keyframes scroll-bob {
-  0%, 100% { transform: translate(-50%, -60%) rotate(45deg); opacity: 0.5; }
-  50% { transform: translate(-50%, -30%) rotate(45deg); opacity: 1; }
-}
-
 /* ============ KPI BAR ============ */
 .kpi-bar {
   margin-top: var(--s6);
@@ -274,16 +249,17 @@ section { padding: var(--s8) 0; }
 @media (min-width: 768px) { .kpi-bar { grid-template-columns: repeat(4, 1fr); } }
 .kpi {
   background: var(--bg-elev);
-  padding: var(--s3);
-  display: flex; flex-direction: column; gap: 4px;
+  padding: var(--s4) var(--s3);
+  display: flex; flex-direction: column; gap: 6px;
 }
 .kpi strong {
-  font-size: clamp(24px, 3vw, 30px); font-weight: 700; letter-spacing: -0.02em;
+  font-size: clamp(30px, 4.2vw, 46px); font-weight: 700; letter-spacing: -0.03em; line-height: 1;
   color: var(--fg);
   font-variant-numeric: tabular-nums;
+  white-space: nowrap;
 }
-.kpi strong .plus { color: var(--accent); }
-.kpi span { font-size: 13px; color: var(--muted); font-weight: 500; }
+.kpi strong .plus { color: var(--accent-2); }
+.kpi > span { font-size: 13.5px; color: var(--muted); font-weight: 500; }
 
 /* ============ GLASS CARD ============ */
 .card {
