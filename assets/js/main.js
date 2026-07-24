@@ -97,4 +97,56 @@
     new IntersectionObserver(function (e) { pastHero = !e[0].isIntersecting; refresh(); }, { threshold: 0 }).observe(hero);
     new IntersectionObserver(function (e) { onBooking = e[0].isIntersecting; refresh(); }, { threshold: 0 }).observe(booking);
   }
+
+  // Modale de réservation (ouvre le calendrier iClosed)
+  var modal = document.getElementById("book-modal");
+  if (modal) {
+    var frame = modal.querySelector("iframe");
+    var lastFocus = null;
+    function openModal(e) {
+      if (e) e.preventDefault();
+      lastFocus = document.activeElement;
+      if (frame && !frame.src) frame.src = frame.dataset.src;
+      modal.hidden = false;
+      document.body.classList.add("no-scroll");
+      var closeBtn = document.getElementById("book-modal-close");
+      if (closeBtn) closeBtn.focus();
+    }
+    function closeModal() {
+      modal.hidden = true;
+      document.body.classList.remove("no-scroll");
+      if (lastFocus && lastFocus.focus) lastFocus.focus();
+    }
+    document.querySelectorAll(".js-book").forEach(function (btn) {
+      btn.addEventListener("click", openModal);
+    });
+    modal.querySelectorAll("[data-book-close], #book-modal-close").forEach(function (el) {
+      el.addEventListener("click", closeModal);
+    });
+    document.addEventListener("keydown", function (e) {
+      if (e.key === "Escape" && !modal.hidden) closeModal();
+    });
+  }
+
+  // Menu mobile
+  var navToggle = document.getElementById("nav-toggle");
+  var mobileNav = document.getElementById("mobile-nav");
+  if (navToggle && mobileNav) {
+    function closeNav() {
+      mobileNav.classList.remove("open");
+      navToggle.setAttribute("aria-expanded", "false");
+      navToggle.setAttribute("aria-label", "Ouvrir le menu");
+    }
+    navToggle.addEventListener("click", function () {
+      var open = mobileNav.classList.toggle("open");
+      navToggle.setAttribute("aria-expanded", open ? "true" : "false");
+      navToggle.setAttribute("aria-label", open ? "Fermer le menu" : "Ouvrir le menu");
+    });
+    mobileNav.querySelectorAll("a").forEach(function (a) {
+      a.addEventListener("click", closeNav);
+    });
+    window.addEventListener("resize", function () {
+      if (window.innerWidth >= 900) closeNav();
+    });
+  }
 })();
