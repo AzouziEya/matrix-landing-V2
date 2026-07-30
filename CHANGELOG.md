@@ -5,6 +5,13 @@ Toutes les évolutions notables de la landing Matrix™.
 ## [Non publié]
 
 ### Modifié
+- **CTA** : suppression des CTA redondants (bande mi-page + bouton final dupliqué). Libellés unifiés autour de « éligibilité ».
+- **Navbar** : responsive avec menu hamburger sous 900px, hiérarchie renforcée (marque et espacements), CTA masqué en mobile au profit du menu et du sticky.
+- **Réservation** : l'iframe iClosed brute (bloc blanc générique) est remplacée par un widget white-label intégré (panneau sombre « au programme de l'appel » + calendrier encadré).
+- **Mise en forme** : en-têtes de section centrés pour une composition équilibrée.
+- **Typographie** : titres allégés (Sora 600, sans dégradé), boutons/KPI/eyebrow moins gras, ombres adoucies.
+- **Copy** : suppression des phrases de transition et leads redondants, déduplication, FAQ resserrée.
+- **Footer** : suppression du bloc CTA dupliqué, padding réduit.
 - **Hero** : accroche avec le chiffre `+64 RDV qualifiés` dans le titre, lead et sous-promesse resserrés.
 - **CTA header** : libellé court (« Éligibilité ») en mobile, complet (« Vérifier mon éligibilité ») à partir de 560px.
 - **Copy** : leads des sections raccourcis (clair, concis, précis) pour ne pas perdre le visiteur.
