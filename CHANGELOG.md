@@ -4,6 +4,15 @@ Toutes les évolutions notables de la landing Matrix™.
 
 ## [Non publié]
 
+### Refonte « chiffres + schémas » (oct. 2026)
+- **Positionnement** : machine à RDV multicanale (LinkedIn, cold call, warm call, SDR et BDR externalisés), cible PME, TPE et agences B2B.
+- **Hero** centré avec chiffre géant, chips des canaux et 4 stats sans cadre (dont +71 RDV posés en octobre 2026).
+- **Schémas** : courbe « sans système / avec Matrix™ », tableau réflexe → phase, schéma canaux → machine → agenda, flux des 3 phases, frise 45 jours proportionnelle.
+- **Nouvelle section Offres** (6 cartes, un KPI par offre).
+- **Bloc « En direct · octobre 2026 »** : RDV par jour (barres), entonnoir RDV → ventes → CA, taux de réponse LinkedIn, cold call. Aucun nom de client.
+- **Cas clients** : chiffre surligné géant par carte, mini-entonnoirs.
+- Textes secondaires réduits visuellement (plus petits, plus discrets), contenus conservés.
+
 ### Modifié
 - **CTA** : suppression des CTA redondants (bande mi-page + bouton final dupliqué). Libellés unifiés autour de « éligibilité ».
 - **Navbar** : responsive avec menu hamburger sous 900px, hiérarchie renforcée (marque et espacements), CTA masqué en mobile au profit du menu et du sticky.
