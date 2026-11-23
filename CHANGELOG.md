@@ -9,6 +9,7 @@ Toutes les évolutions notables de la landing Matrix™.
 - Chiffres du deck : +412 000 € générés, +293 RDV qualifiés, 27 entreprises, 67 % de réponse, TOP 20 Favikon.
 - Bande de logos clients défilante (logos extraits du deck), section « Cibles » par client.
 - Riseup : 64 RDV reliés aux 13 000 € signés ; France IA : entonnoir 15+ RDV/jour → 162 RDV → 19 ventes → 32 350 € ; Wattlift : 50 appels/jour, 10 RDV le 1er mois, mission renouvelée.
+- Section « Je me déplace chez vous » juste après le hero : photo, présentiel Bruxelles → Paris, bande de photos terrain qui défile.
 - Canaux, services A à Z, stack, méthode en 4 étapes, mois de test + garantie résultat, section fondatrice avec photos terrain, CTA en 3 étapes.
 
 ### Refonte « chiffres + schémas » (oct. 2026)

@@ -977,3 +977,43 @@ a:focus-visible, button:focus-visible, summary:focus-visible {
   .sector-cloud { gap: 6px; }
   .sector-cloud li { font-size: 12.5px; padding: 7px 12px; }
 }
+
+/* ============ SUR LE TERRAIN (v12) ============ */
+#terrain { padding-top: var(--s6); }
+.hero-badges { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px 10px; margin-top: var(--s3); }
+.hero-badges .hero-badge { margin-top: 0; }
+.hb-terrain { border-color: rgba(74,222,128,0.4); background: rgba(74,222,128,0.07); }
+.hb-terrain span { color: var(--green); }
+.founder-photo { position: relative; }
+.founder-tag {
+  position: absolute; left: 50%; bottom: 14px; transform: translateX(-50%); white-space: nowrap;
+  font-family: var(--font-display); font-size: 12.5px; font-weight: 600; color: #fff;
+  padding: 7px 14px; border-radius: 999px; background: rgba(13,8,26,0.82); border: 1px solid var(--accent-border);
+}
+.founder-text b { color: var(--fg); }
+.terrain-points { list-style: none; display: grid; gap: 10px; margin-top: var(--s3); }
+.terrain-points li { display: flex; gap: 12px; align-items: center; padding: 12px 14px; border-radius: var(--r-sm); background: var(--glass); border: 1px solid var(--border); }
+.tp-ico { width: 34px; height: 34px; flex: none; border-radius: 10px; display: inline-flex; align-items: center; justify-content: center; font-size: 17px; color: var(--green); background: rgba(74,222,128,0.1); border: 1px solid rgba(74,222,128,0.35); }
+.terrain-points div { display: flex; flex-direction: column; }
+.terrain-points b { font-family: var(--font-display); font-size: 15px; font-weight: 600; }
+.terrain-points span:not(.tp-ico) { font-size: 13px; color: var(--muted); }
+.photo-band {
+  margin-top: var(--s6); overflow: hidden;
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+          mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+}
+.photo-track { list-style: none; display: flex; gap: 14px; width: max-content; animation: logos-scroll 45s linear infinite; }
+.photo-band:hover .photo-track { animation-play-state: paused; }
+.photo-track li { flex: none; }
+.photo-track img {
+  height: clamp(200px, 26vw, 300px); width: auto; aspect-ratio: 374 / 390; object-fit: cover;
+  border-radius: var(--r-md); border: 1px solid var(--border); transition: transform 0.35s ease;
+}
+.photo-track li:nth-child(odd) img { transform: rotate(-1.2deg); }
+.photo-track li:nth-child(even) img { transform: rotate(1.2deg) translateY(10px); }
+.photo-track li:hover img { transform: scale(1.03); }
+@media (prefers-reduced-motion: reduce) {
+  .photo-track { animation: none; flex-wrap: wrap; justify-content: center; width: auto; }
+  .photo-track li[aria-hidden="true"] { display: none; }
+  .photo-band { -webkit-mask-image: none; mask-image: none; }
+}
