@@ -3,7 +3,7 @@
 Landing page de Matrix™, la machine à RDV B2B multicanale (LinkedIn, cold call, warm call, SDR/BDR externalisé).
 Site statique, sans framework ni build : ce qui est dans le repo est ce qui est servi.
 
-**Production :** https://matrix-tm.vercel.app (déploiement automatique à chaque push sur `main`)
+**Production :** https://matrix-incubateur.be (déploiement automatique à chaque push sur `main`)
 
 ## Structure
 
@@ -57,13 +57,16 @@ Site statique, sans framework ni build : ce qui est dans le repo est ce qui est 
 
 ## KPI autorisés dans la copy
 
-Ne rien inventer : uniquement des chiffres réels et sourcés.
+Source de référence : le deck « Matrix Presentation References » + le suivi « Mes clients ». Ne rien inventer.
 
-- Historique : +3 ans d'expertise B2B · +380k € générés · +64 RDV qualifiés en 1 mois · +20 clients accompagnés.
-- Octobre 2026 (arrêtés au 23/10, source : suivi des missions et plateforme d'envoi LinkedIn) :
-  +71 RDV posés sur 2 missions · 65 RDV en 8 jours d'appels (setting) · record 17 RDV/jour · 6 ventes signées · 10 900 € de CA client · 6 RDV dirigeants en 4 jours de cold call (100 appels/jour) · taux de réponse LinkedIn 52 % / 45 % / 40 % (808 / 606 / 2 336 leads).
+- Global : +412 000 € de CA généré · +293 RDV qualifiés · 27 entreprises accompagnées · 67 % meilleur taux de réponse · TOP 20 Favikon Belgium (Sales).
+- Riseup Consulting : +64 RDV en 30 jours · 13 000 € signés le 1er mois · 67 %.
+- LandQuire : 280 000 $ signés · +7 RDV en 2 semaines · 45 %.
+- France IA (au 23/11/2026) : 162 RDV posés · 19 ventes · 32 350 € de CA client · record 17 RDV/jour.
+- Wattlift : 50 appels/jour · ~670 appels · 10 RDV le 1er mois · mission renouvelée.
+- Grind Agency : +1 client sur 4 sites. Inskip : panier 2 à 5 k€, C-level.
 
-Aucun nom de client sur le site. Toute preuve chiffrée doit renvoyer vers `/legal/avertissement-resultats`.
+Toute preuve chiffrée doit renvoyer vers `/legal/avertissement-resultats`.
 
 ## Déploiement
 
@@ -71,4 +74,4 @@ Aucun nom de client sur le site. Toute preuve chiffrée doit renvoyer vers `/leg
 2. Vercel construit une préversion automatiquement sur chaque PR.
 3. Merge sur `main` = mise en production immédiate.
 
-Vérifications après mise en prod : page d'accueil, une page légale, l'iframe iClosed, et `curl -I https://matrix-tm.vercel.app` (headers CSP/HSTS présents).
+Vérifications après mise en prod : page d'accueil, une page légale, l'iframe iClosed, et `curl -I https://matrix-incubateur.be` (headers CSP/HSTS présents).
